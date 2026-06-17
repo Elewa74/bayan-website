@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بَيَان — منصة القرائية العربية | حين تصبح القراءةُ فهمًا</title>
+<meta name="description" content="بَيَان منصة القرائية العربية: رحلة قرائية متدرّجة عبر ستة مستويات، من رياض الأطفال إلى الجامعة، تبني القارئ المفكّر لا الناطق فحسب.">
+<meta name="keywords" content="القرائية, القراءة, العربية, منصة تعليمية, بيان, Arabic literacy, reading, education platform, Bayan, Almotahida Education">
+<meta name="author" content="Almotahida Education Group · مجموعة المتحدة للتعليم">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#EC2127">
+<link rel="canonical" href="https://bayan.almotahidaeducation.com/">
+
+<!-- Favicon (uses brand logo) -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="بَيَان · Bayan">
+<meta property="og:title" content="بَيَان — منصة القرائية العربية | حين تصبح القراءةُ فهمًا">
+<meta property="og:description" content="رحلةٌ قرائية متدرّجة عبر ستة مستويات، من رياض الأطفال إلى الجامعة، تبني القارئ المفكّر — بمحتوًى يصل المتعلّم بهويّته وحضارته.">
+<meta property="og:image" content="assets/hero.jpg">
+<meta property="og:url" content="https://bayan.almotahidaeducation.com/">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="بَيَان — منصة القرائية العربية">
+<meta name="twitter:description" content="حين تصبح القراءةُ فهمًا — منصة القرائية العربية من مجموعة المتحدة للتعليم.">
+<meta name="twitter:image" content="assets/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF8F4; --paper-2:#F4EFE7; --paper-3:#ECE4D8; --card:#FFFFFF;
+  --ink:#17120F; --ink-soft:#2C2521; --body:#4B443E; --muted:#8C8177;
+  --red:#EC2127; --red-deep:#C2090F; --red-tint:#FBE6E6;
+  --black:#0E0B0A; --black-2:#181311; --on-dark:#F3ECE2; --on-dark-mut:#A89C90;
+  --line:#E7E0D5; --line-2:#DCD4C7; --line-dark:#2B2421;
+  --shadow:0 26px 64px -36px rgba(20,16,14,.40); --shadow-sm:0 12px 30px -20px rgba(20,16,14,.30);
+  --radius:18px; --radius-sm:11px; --maxw:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Tajawal',system-ui,'Segoe UI',sans-serif;background:var(--paper);color:var(--body);
+  font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif;color:var(--ink);line-height:1.28;font-weight:800;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--red);color:#fff}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,4.5vw,40px)}
+.sec{padding-block:clamp(74px,11vh,128px)}
+.bg2{background:var(--paper-2)} .bg3{background:var(--paper-3)}
+
+/* ---------- Section heads ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'Cairo';font-weight:700;font-size:.82rem;
+  letter-spacing:.06em;color:var(--red);text-transform:none}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;border-radius:2px}
+.s-head{max-width:760px;margin-bottom:clamp(34px,5vw,56px)}
+.s-head h2{font-size:clamp(1.95rem,4.4vw,3rem);margin:16px 0 0}
+.s-head .en{font-family:'Inter',sans-serif;color:var(--muted);font-weight:500;font-size:.95rem;letter-spacing:.02em;margin-top:8px}
+.s-head .lead{color:var(--body);font-size:1.12rem;margin-top:18px;max-width:680px}
+.center{margin-inline:auto;text-align:center}
+.center .eyebrow{justify-content:center}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:'Cairo';font-weight:700;font-size:1rem;
+  padding:14px 28px;border-radius:9px;cursor:pointer;border:1.6px solid transparent;transition:.25s;white-space:nowrap}
+.btn .ar{font-size:.95rem;transition:transform .25s}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 16px 34px -16px rgba(236,33,39,.6)}
+.btn-primary:hover{background:var(--red-deep);transform:translateY(-2px)}
+.btn-primary:hover .ar{transform:translateX(-4px)}
+.btn-line{background:transparent;color:var(--ink);border-color:var(--line-2)}
+.btn-line:hover{border-color:var(--red);color:var(--red)}
+.dark .btn-line{color:var(--on-dark);border-color:rgba(255,255,255,.22)}
+.dark .btn-line:hover{border-color:var(--red);color:#fff}
+.lnk{display:inline-flex;align-items:center;gap:7px;color:var(--red);font-family:'Cairo';font-weight:700;font-size:.95rem}
+.lnk .ar{transition:transform .25s} .lnk:hover .ar{transform:translateX(-4px)}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:.3s}
+header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line);box-shadow:0 8px 30px -24px rgba(20,16,14,.4)}
+.nav{display:flex;align-items:center;gap:22px;height:76px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{height:42px;width:auto;display:block}
+.brand .bn{display:flex;flex-direction:column;line-height:1}
+.brand .bn b{font-family:'Cairo';font-weight:800;font-size:1.32rem;color:var(--ink)}
+.brand .bn span{font-family:'Inter';font-size:.6rem;letter-spacing:.34em;color:var(--muted);margin-top:3px}
+.menu{display:flex;align-items:center;gap:4px;margin-inline-start:auto}
+.menu a{font-family:'Cairo';font-weight:600;font-size:.97rem;color:var(--ink-soft);padding:9px 14px;border-radius:8px;transition:.2s}
+.menu a:hover{color:var(--red);background:rgba(236,33,39,.06)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.lang{font-family:'Cairo';font-weight:700;font-size:.85rem;color:var(--ink-soft);border:1.4px solid var(--line-2);
+  border-radius:8px;padding:7px 12px;display:inline-flex;gap:6px;align-items:center}
+.lang b{color:var(--red)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 600px at 88% -10%, #FBEDED 0%, rgba(251,237,237,0) 55%),
+  linear-gradient(170deg,#FCFAF6,#EFE7DC)}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(36px,5vw,72px);align-items:center;
+  padding-block:clamp(64px,11vh,118px)}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:900;line-height:1.08;margin-top:20px}
+.hero h1 .em{color:var(--red);position:relative}
+.hero p.sub{color:var(--ink-soft);font-size:clamp(1.06rem,1.6vw,1.22rem);line-height:1.8;margin:24px 0 34px;max-width:540px}
+.hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.hero .micro{display:flex;gap:22px;margin-top:34px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;font-family:'Cairo';font-weight:600}
+.hero .micro span{display:inline-flex;align-items:center;gap:8px}
+.hero .micro b{color:var(--red);font-weight:800}
+.hero-art{position:relative;display:flex;align-items:center;justify-content:center;min-height:340px}
+.hero-art .disc{position:absolute;width:min(440px,82%);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 50% 38%,#fff 0%,#F7EFE4 60%,#F0E7DA 100%);
+  box-shadow:var(--shadow);border:1px solid var(--line)}
+.hero-art .ring{position:absolute;width:min(540px,98%);aspect-ratio:1;border-radius:50%;border:1px dashed var(--line-2)}
+.hero-art img{position:relative;height:min(420px,52vw);width:auto;filter:drop-shadow(0 30px 40px rgba(236,33,39,.22))}
+.hero-art .tagchip{position:absolute;bottom:6%;inset-inline-start:2%;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:11px 16px;box-shadow:var(--shadow-sm);font-family:'Cairo';font-weight:700;font-size:.86rem;color:var(--ink)}
+.hero-art .tagchip i{color:var(--red);font-style:normal}
+
+/* ---------- Trust strip ---------- */
+.trust{background:var(--black);color:var(--on-dark)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);
+  border-radius:0;padding:0}
+.trust .cell{background:var(--black);padding:30px clamp(18px,2.5vw,30px);text-align:center}
+.trust .cell .n{font-family:'Cairo';font-weight:900;font-size:2.1rem;color:var(--red);line-height:1}
+.trust .cell .t{font-family:'Cairo';font-weight:600;font-size:.98rem;color:var(--on-dark);margin-top:8px}
+.trust .cell .s{font-family:'Inter';font-size:.74rem;letter-spacing:.04em;color:var(--on-dark-mut);margin-top:4px}
+
+/* ---------- Generic grids / cards ---------- */
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  box-shadow:var(--shadow-sm);transition:.3s;height:100%}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--red)}
+.card h3{font-size:1.22rem}
+.card p{color:var(--body);margin-top:10px;font-size:1rem}
+.icon{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:var(--red-tint);color:var(--red);margin-bottom:18px}
+.icon svg{width:26px;height:26px}
+
+/* ---------- Problem ---------- */
+.problem .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(34px,5vw,68px);align-items:center}
+.problem .big{font-family:'Cairo';font-weight:800;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--ink);line-height:1.32}
+.problem .big em{color:var(--red);font-style:normal}
+.problem p{font-size:1.08rem;margin-bottom:18px}
+
+/* ---------- Dark sections (literacy / cta) ---------- */
+.dark{position:relative;background:var(--black);color:var(--on-dark);overflow:hidden}
+.dark h2,.dark h3{color:#fff}
+.dark .s-head .en{color:var(--on-dark-mut)}
+.dark .s-head .lead{color:var(--on-dark)}
+.dark .eyebrow{color:#FF6A6E}.dark .eyebrow::before{background:#FF6A6E}
+.dark .wm{position:absolute;inset-inline-end:-4%;top:50%;transform:translateY(-50%);height:118%;opacity:.05;pointer-events:none}
+.litq{font-family:'Cairo';font-weight:800;font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:34px}
+.litdefs{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:38px}
+.litdefs .d{background:rgba(255,255,255,.04);border:1px solid var(--line-dark);border-radius:var(--radius);padding:26px}
+.litdefs .d .k{font-family:'Cairo';font-weight:800;font-size:1.25rem;color:#fff;display:flex;align-items:baseline;gap:10px}
+.litdefs .d .k small{font-family:'Inter';font-weight:500;font-size:.8rem;color:var(--on-dark-mut)}
+.litdefs .d.is-lit{border-color:rgba(236,33,39,.5);background:rgba(236,33,39,.08)}
+.litdefs .d.is-lit .k{color:#fff}
+.litdefs .d p{color:var(--on-dark);margin-top:12px;font-size:1.02rem}
+.pull{position:relative;border-top:1px solid var(--line-dark);padding-top:34px;margin-top:12px}
+.pull .q{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.7rem);color:#fff;line-height:1.7;max-width:900px}
+.pull .q b{color:var(--red)}
+.pull .en{font-family:'Inter';color:var(--on-dark-mut);font-size:.98rem;margin-top:16px;max-width:680px}
+
+/* ---------- Tables ---------- */
+.tbl-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow-sm)}
+table.t{width:100%;border-collapse:collapse;min-width:560px}
+.t th,.t td{padding:15px 20px;text-align:start;border-bottom:1px solid var(--line);font-size:1rem}
+.t thead th{background:var(--paper-2);font-family:'Cairo';color:var(--ink);font-weight:700;font-size:.96rem}
+.t tbody tr:last-child td{border-bottom:0}
+.t tbody tr:nth-child(even){background:#FCFAF7}
+.t .lvl{color:var(--red);font-family:'Cairo';font-weight:900;font-size:1.05rem}
+.t .hd{font-family:'Cairo';font-weight:700;color:var(--ink)}
+.tnote{font-size:.92rem;color:var(--muted);margin-top:14px;display:flex;gap:8px;align-items:flex-start}
+.tnote::before{content:"●";color:var(--red);font-size:.6rem;margin-top:7px}
+/* dark table */
+.dark .tbl-wrap{background:rgba(255,255,255,.03);border-color:var(--line-dark)}
+.dark .t th,.dark .t td{border-color:var(--line-dark);color:var(--on-dark)}
+.dark .t thead th{background:rgba(255,255,255,.05);color:#fff}
+.dark .t thead th.hi{color:var(--red)}
+.dark .t tbody tr:nth-child(even){background:rgba(255,255,255,.02)}
+.dark .t .hd{color:#fff}
+.dark .tnote{color:var(--on-dark-mut)}
+
+/* ---------- Stepper ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;position:relative;box-shadow:var(--shadow-sm)}
+.step .num{font-family:'Cairo';font-weight:900;font-size:1.05rem;width:42px;height:42px;border-radius:50%;
+  background:var(--red);color:#fff;display:grid;place-items:center;margin-bottom:18px}
+.step h3{font-size:1.15rem} .step p{color:var(--body);margin-top:9px;font-size:.99rem}
+
+/* ---------- Lesson 10 ---------- */
+.lesson{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.lcell{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 16px;display:flex;gap:12px;align-items:flex-start;transition:.25s}
+.lcell:hover{border-color:var(--red);transform:translateY(-3px)}
+.lcell .ln{font-family:'Cairo';font-weight:900;color:var(--red);font-size:1.05rem;flex:none}
+.lcell .lt{font-family:'Cairo';font-weight:600;font-size:.92rem;color:var(--ink);line-height:1.4}
+
+/* ---------- Tracks ---------- */
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.track{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm)}
+.track.alt{background:var(--ink);color:var(--on-dark);border-color:var(--ink)}
+.track .th{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.track .th .tag{font-family:'Inter';font-size:.72rem;letter-spacing:.12em;color:var(--red);font-weight:600}
+.track.alt .th .tag{color:#FF7074}
+.track h3{font-size:1.4rem} .track.alt h3{color:#fff}
+.track dl{margin:18px 0 0;display:grid;gap:13px}
+.track .row{display:grid;grid-template-columns:96px 1fr;gap:12px;padding-top:13px;border-top:1px solid var(--line)}
+.track.alt .row{border-top-color:var(--line-dark)}
+.track dt{font-family:'Cairo';font-weight:700;color:var(--muted);font-size:.92rem}
+.track.alt dt{color:var(--on-dark-mut)}
+.track dd{margin:0;color:var(--body);font-size:.98rem}
+.track.alt dd{color:var(--on-dark)}
+
+/* ---------- Axes ---------- */
+.axiscard{position:relative;overflow:hidden}
+.axiscard .top{display:flex;align-items:center;gap:14px}
+.axiscard h3{font-size:1.3rem}
+.axiscard h3 small{display:block;font-family:'Inter';font-weight:500;font-size:.78rem;color:var(--muted);letter-spacing:.06em;margin-top:3px}
+.axiscard .desc{color:var(--body);margin:16px 0 18px;font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tags span{font-family:'Tajawal';font-weight:500;font-size:.82rem;background:var(--paper-2);color:var(--ink-soft);
+  border:1px solid var(--line);border-radius:30px;padding:5px 13px}
+.persona{margin-top:26px;background:linear-gradient(120deg,#fff,#FBEFEF);border:1px solid var(--line);
+  border-radius:var(--radius);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;box-shadow:var(--shadow-sm)}
+.persona .badge{width:64px;height:64px;border-radius:16px;background:var(--red);color:#fff;display:grid;place-items:center}
+.persona .badge svg{width:32px;height:32px}
+.persona h3{font-size:1.25rem} .persona p{color:var(--body);margin-top:8px}
+
+/* ---------- Platform ---------- */
+.platform .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:46px}
+.role{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow-sm);transition:.25s}
+.role:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--red)}
+.role .rt{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.role .dot{width:11px;height:11px;border-radius:50%;background:var(--red);flex:none}
+.role h3{font-size:1.12rem} .role p{font-size:.95rem;color:var(--body);margin-top:4px}
+.pcols{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,4vw,56px);align-items:start}
+.featlist{display:grid;gap:16px}
+.feat{display:grid;grid-template-columns:auto 1fr;gap:16px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow-sm)}
+.feat .fi{width:44px;height:44px;border-radius:11px;background:var(--red-tint);color:var(--red);display:grid;place-items:center}
+.feat .fi svg{width:22px;height:22px}
+.feat h4{font-family:'Cairo';font-size:1.04rem;color:var(--ink)} .feat p{font-size:.93rem;color:var(--body);margin-top:3px}
+/* mock dashboard */
+.mock{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.mock .bar{display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--paper-2)}
+.mock .bar i{width:11px;height:11px;border-radius:50%;background:var(--line-2);display:inline-block}
+.mock .bar i:first-child{background:var(--red)}
+.mock .bar .ttl{margin-inline-start:8px;font-family:'Cairo';font-weight:700;font-size:.9rem;color:var(--ink)}
+.mock .body{padding:22px}
+.mock .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.mock .tile{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px}
+.mock .tile .lab{font-family:'Cairo';font-size:.74rem;color:var(--muted);font-weight:600}
+.mock .tile .val{font-family:'Cairo';font-weight:900;font-size:1.35rem;color:var(--ink);margin-top:3px}
+.mock .tile .val.red{color:var(--red)}
+.mock .lvls{display:grid;gap:12px}
+.mock .lv{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:center}
+.mock .lv .nm{font-family:'Cairo';font-weight:700;font-size:.85rem;color:var(--ink-soft)}
+.mock .track-bar{height:9px;border-radius:6px;background:var(--paper-3);overflow:hidden}
+.mock .track-bar > i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--red),#FF5A5F)}
+.mock .cap{font-family:'Inter';font-size:.7rem;color:var(--muted);text-align:center;padding:8px;background:var(--paper-2);border-top:1px solid var(--line)}
+
+/* ---------- Solutions ---------- */
+.solcard{display:flex;flex-direction:column}
+.solcard .tag{font-family:'Inter';font-size:.72rem;letter-spacing:.1em;color:var(--red);font-weight:600;text-transform:uppercase}
+.solcard h3{font-size:1.28rem;margin:8px 0 14px}
+.solcard .need{color:var(--muted);font-size:.96rem;padding-bottom:14px;margin-bottom:14px;border-bottom:1px dashed var(--line-2)}
+.solcard .resp{color:var(--body);font-size:.99rem;flex:1}
+.solcard .lnk{margin-top:18px}
+
+/* ---------- About / principles ---------- */
+.about .wrap{display:grid;grid-template-columns:1fr;gap:0}
+.philo{background:linear-gradient(160deg,#fff,#F7EFE4);border:1px solid var(--line);border-radius:var(--radius);
+  padding:clamp(30px,4vw,52px);box-shadow:var(--shadow-sm);margin-bottom:42px}
+.philo .q{font-family:'Cairo';font-weight:800;font-size:clamp(1.4rem,2.8vw,2rem);color:var(--ink);line-height:1.45}
+.philo .q em{color:var(--red);font-style:normal}
+.philo p{color:var(--body);margin-top:18px;font-size:1.06rem;max-width:820px}
+.princ{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:40px}
+.review{background:var(--ink);color:var(--on-dark);border-radius:var(--radius);padding:clamp(28px,3.5vw,42px);
+  display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.review .seal{width:70px;height:70px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:grid;place-items:center;flex:none}
+.review .seal svg{width:34px;height:34px}
+.review h3{color:#fff;font-size:1.2rem} .review p{color:var(--on-dark);margin-top:8px;font-size:1rem}
+.review b{color:#fff}
+
+/* ---------- FAQ ---------- */
+.faqwrap{max-width:880px;margin-inline:auto;display:grid;gap:14px}
+details.faq{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.25s}
+details.faq[open]{border-color:var(--red);box-shadow:var(--shadow-sm)}
+details.faq summary{list-style:none;cursor:pointer;padding:22px 26px;display:flex;align-items:center;gap:16px;
+  font-family:'Cairo';font-weight:700;font-size:1.08rem;color:var(--ink)}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary .pl{margin-inline-start:auto;width:26px;height:26px;flex:none;position:relative;transition:.3s}
+details.faq summary .pl::before,details.faq summary .pl::after{content:"";position:absolute;background:var(--red);border-radius:2px;
+  inset-inline-start:50%;top:50%;transform:translate(-50%,-50%)}
+details.faq summary .pl::before{width:14px;height:2px}
+details.faq summary .pl::after{width:2px;height:14px;transition:.3s}
+details.faq[open] summary .pl::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+details.faq .ans{padding:0 26px 24px;color:var(--body);font-size:1.02rem}
+
+/* ---------- Contact CTA ---------- */
+.cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,64px);align-items:center;position:relative}
+.cta h2{font-size:clamp(2rem,4.4vw,3.2rem);color:#fff;line-height:1.18}
+.cta h2 em{color:var(--red);font-style:normal}
+.cta .sub{color:var(--on-dark);font-size:1.1rem;margin-top:20px;max-width:480px}
+.form{background:#fff;border-radius:var(--radius);padding:clamp(26px,3vw,38px);box-shadow:var(--shadow)}
+.form h3{color:var(--ink);font-size:1.3rem;margin-bottom:6px}
+.form .fp{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:'Cairo';font-weight:600;font-size:.9rem;color:var(--ink-soft);margin-bottom:7px}
+.input,select.input{width:100%;padding:14px 16px;border-radius:10px;border:1.4px solid var(--line-2);background:#fff;
+  font-family:'Tajawal';font-size:1rem;color:var(--ink);transition:.2s}
+.input:focus,select.input:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 4px rgba(236,33,39,.1)}
+.form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+.form .note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:14px}
+.thanks{display:none;text-align:center;padding:30px 10px}
+.thanks .ok{width:64px;height:64px;border-radius:50%;background:var(--red-tint);color:var(--red);display:grid;place-items:center;margin:0 auto 16px}
+.thanks .ok svg{width:32px;height:32px}
+.thanks h3{color:var(--ink)} .thanks p{color:var(--body);margin-top:8px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--black);color:var(--on-dark-mut)}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-block:64px 30px}
+.foot .fb img{height:58px;width:auto;margin-bottom:16px}
+.foot .fb .bn b{font-family:'Cairo';font-weight:800;font-size:1.5rem;color:#fff;display:block}
+.foot .fb .bn span{font-family:'Inter';font-size:.62rem;letter-spacing:.34em;color:var(--on-dark-mut)}
+.foot .fb p{color:var(--on-dark);font-size:.96rem;margin-top:14px;max-width:300px}
+.foot h4{font-family:'Cairo';color:#fff;font-size:1rem;margin-bottom:16px}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.foot ul a{color:var(--on-dark-mut);font-size:.95rem;transition:.2s}
+.foot ul a:hover{color:var(--red)}
+.foot .langrow{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line-dark);border-radius:8px;
+  padding:8px 12px;font-family:'Cairo';font-weight:700;font-size:.85rem;color:var(--on-dark)}
+.foot .langrow b{color:var(--red)}
+.foot-bottom{border-top:1px solid var(--line-dark);padding-block:22px;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:12px;align-items:center}
+.foot-bottom p{font-size:.88rem;color:var(--on-dark-mut)}
+.foot-bottom .links{display:flex;gap:20px}
+.foot-bottom .links a{font-size:.88rem;color:var(--on-dark-mut)}
+.foot-bottom .links a:hover{color:var(--red)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:.7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1080px){
+  .lesson{grid-template-columns:repeat(2,1fr)}
+  .platform .roles{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:980px){
+  .menu,.nav-cta .btn{display:none}
+  .burger{display:flex}
+  .menu.open{display:flex;position:absolute;inset-inline:0;top:76px;flex-direction:column;background:var(--paper);
+    border-bottom:1px solid var(--line);padding:14px 20px;gap:4px;box-shadow:var(--shadow)}
+  .menu.open a{padding:13px 10px;border-radius:9px}
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero .cta-row,.hero .micro{justify-content:center}
+  .hero-art{order:-1;min-height:300px}
+  .problem .wrap,.pcols,.cta .wrap{grid-template-columns:1fr}
+  .g4,.g3{grid-template-columns:repeat(2,1fr)}
+  .steps,.tracks,.litdefs,.princ{grid-template-columns:1fr}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .trust .cell:nth-child(-n+2){border-bottom:1px solid var(--line-dark)}
+  .review,.persona{grid-template-columns:1fr;text-align:center}
+  .review .seal,.persona .badge{margin-inline:auto}
+  .foot{grid-template-columns:1fr 1fr;gap:34px}
+  .foot .fb{grid-column:1/-1}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .g4,.g3,.g2,.lesson{grid-template-columns:1fr}
+  .mock .tiles{grid-template-columns:repeat(3,1fr)}
+  .foot{grid-template-columns:1fr}
+  .nav{gap:12px}.brand .bn span{display:none}
+  .btn{padding:13px 22px}
+  .foot-bottom{flex-direction:column;align-items:flex-start}
+}
+</style>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<style>
+/* ===== bilingual toggle ===== */
+html[lang="ar"] .t-en{display:none!important}
+html[lang="en"] .t-ar{display:none!important}
+/* in Arabic (primary) view, hide the inline English glosses so a heading keeps one font + one size */
+html[lang="ar"] .litdefs .d .k small,
+html[lang="ar"] .axiscard h3 small{display:none!important}
+html[lang="en"] *{font-family:'Inter',system-ui,'Segoe UI',sans-serif!important}
+html[lang="en"] #langBtn,html[lang="en"] #langBtn *{font-family:'Cairo',sans-serif!important}
+html[lang="en"] .bn b{letter-spacing:-.02em}
+.lang{cursor:pointer;font-family:'Cairo',sans-serif;font-weight:700;font-size:.82rem;color:var(--ink-soft);background:transparent;border:1.4px solid var(--line-2);border-radius:999px;padding:7px 15px;line-height:1;transition:border-color .2s,color .2s}
+.lang:hover{border-color:var(--red);color:var(--red)}
+header.scrolled .lang{border-color:var(--line-2)}
+@media (max-width:560px){.lang{padding:6px 11px;font-size:.78rem}}
+/* subheadings (replace former inline styles) */
+.subh{font-size:1.3rem;margin:0 0 18px}
+/* arrow (replaces former .ar arrow), direction-aware on hover */
+.btn .x,.lnk .x{font-size:.95rem;display:inline-block;transition:transform .25s}
+.btn-primary:hover .x,.lnk:hover .x{transform:translateX(-4px)}
+html[lang="en"] .btn-primary:hover .x,html[lang="en"] .lnk:hover .x{transform:translateX(4px)}
+</style>
+<style>
+/* ===== photography ===== */
+img{max-width:100%}
+.hero-art.has-photo{min-height:0}
+.hero-photo{position:relative;width:100%;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 70px -32px rgba(14,11,10,.6)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-photo::after{content:"";position:absolute;inset:0;border-radius:var(--radius);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);pointer-events:none}
+.card-media{margin:-28px -28px 22px;aspect-ratio:16/10;background:var(--line);overflow:hidden}
+.card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.axiscard:hover .card-media img{transform:scale(1.05)}
+.sec-banner{position:relative;border-radius:var(--radius);overflow:hidden;margin:0 0 clamp(28px,4vw,44px);aspect-ratio:21/9;box-shadow:0 26px 54px -32px rgba(14,11,10,.5)}
+.sec-banner img{width:100%;height:100%;object-fit:cover;display:block}
+.about-band{position:relative;border-radius:var(--radius);overflow:hidden;margin:4px 0 clamp(26px,4vw,40px);aspect-ratio:16/7;box-shadow:0 26px 54px -32px rgba(14,11,10,.5)}
+.about-band img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:560px){.card-media{aspect-ratio:16/9}.about-band{aspect-ratio:16/8}.sec-banner{aspect-ratio:16/9}}
+</style>
+<style>.solcard{overflow:hidden}.solcard:hover .card-media img{transform:scale(1.05)}</style>
+
+<style>
+/* ===== accessibility: skip link + focus ===== */
+.skip-link{position:absolute;inset-inline-start:50%;transform:translateX(-50%) translateY(-160%);top:8px;z-index:300;
+  background:var(--red);color:#fff;font-family:'Cairo',sans-serif;font-weight:700;font-size:.95rem;
+  padding:10px 20px;border-radius:9px;transition:transform .2s}
+.skip-link:focus{transform:translateX(-50%);outline:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:6px}
+.lang:focus-visible,.btn:focus-visible{outline-offset:4px}
+
+/* ===== scroll progress bar ===== */
+#progress{position:fixed;top:0;inset-inline:0;height:3px;z-index:200;transform-origin:right;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--red),#FF5A5F);will-change:transform;transition:transform .08s linear}
+html[lang="en"] #progress{transform-origin:left}
+
+/* ===== active nav highlight ===== */
+.menu a.active{color:var(--red);background:rgba(236,33,39,.07)}
+
+/* ===== back-to-top ===== */
+#toTop{position:fixed;inset-block-end:24px;inset-inline-end:24px;z-index:150;width:48px;height:48px;border-radius:50%;
+  border:0;cursor:pointer;background:var(--red);color:#fff;display:grid;place-items:center;
+  box-shadow:0 14px 30px -12px rgba(236,33,39,.7);opacity:0;visibility:hidden;transform:translateY(14px);
+  transition:opacity .3s,transform .3s,background .2s}
+#toTop.show{opacity:1;visibility:visible;transform:none}
+#toTop:hover{background:var(--red-deep)}
+#toTop svg{width:22px;height:22px}
+@media(max-width:560px){#toTop{width:44px;height:44px;inset-block-end:16px;inset-inline-end:16px}}
+
+/* ===== impact stats band ===== */
+.impact{background:linear-gradient(160deg,#fff,#F7EFE4);border-block:1px solid var(--line);position:relative;overflow:hidden}
+.impact .grid-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,3vw,34px)}
+.stat{text-align:center;padding:14px}
+.stat .sn{font-family:'Cairo',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,3.4rem);color:var(--red);
+  line-height:1;letter-spacing:-.02em}
+.stat .sn .suf{font-size:.6em}
+.stat .st{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.02rem;color:var(--ink);margin-top:10px}
+.stat .ss{font-size:.9rem;color:var(--muted);margin-top:4px}
+@media(max-width:860px){.impact .grid-stats{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+/* ===== contact details block ===== */
+.contact-info{display:grid;gap:14px;margin-top:30px}
+.cinfo{display:flex;align-items:center;gap:14px;color:var(--on-dark)}
+.cinfo .ci{width:42px;height:42px;border-radius:11px;flex:none;display:grid;place-items:center;
+  background:rgba(236,33,39,.14);color:#FF6A6E}
+.cinfo .ci svg{width:20px;height:20px}
+.cinfo .ct b{display:block;font-family:'Cairo',sans-serif;color:#fff;font-size:.98rem}
+.cinfo .ct span{font-size:.9rem;color:var(--on-dark-mut)}
+.cinfo a{color:var(--on-dark)}.cinfo a:hover{color:#FF6A6E}
+.socials{display:flex;gap:10px;margin-top:6px}
+.socials a{width:40px;height:40px;border-radius:11px;border:1px solid var(--line-dark);display:grid;place-items:center;
+  color:var(--on-dark-mut);transition:.2s}
+.socials a:hover{color:#fff;border-color:var(--red);background:rgba(236,33,39,.12)}
+.socials svg{width:19px;height:19px}
+.foot .contact-mini{display:grid;gap:10px;margin-top:2px}
+.foot .contact-mini a{display:flex;align-items:center;gap:9px;color:var(--on-dark-mut);font-size:.95rem}
+.foot .contact-mini a:hover{color:var(--red)}
+.foot .contact-mini svg{width:16px;height:16px;flex:none;color:var(--red)}
+.foot .fsocials{display:flex;gap:9px;margin-top:16px}
+.foot .fsocials a{width:36px;height:36px;border-radius:9px;border:1px solid var(--line-dark);display:grid;place-items:center;color:var(--on-dark-mut);transition:.2s}
+.foot .fsocials a:hover{color:#fff;border-color:var(--red);background:rgba(236,33,39,.12)}
+.foot .fsocials svg{width:17px;height:17px}
+</style>
+
+<style>
+/* ============================================================
+   ARTISTIC TOUCHES · لمسات فنية (راقٍ وهادئ)
+   كلّها مرسومة SVG ضمن الشيفرة — بلا صور خارجية، وخلف المحتوى دائمًا
+   ============================================================ */
+:root{
+  /* نجمة ثمانية (مربّعان متقاطعان) — خطّ عاجيّ خفيف للأقسام الفاتحة */
+  --pat-geo:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23B9AE99' stroke-width='1'%3E%3Cpolygon points='42,12 72,42 42,72 12,42'/%3E%3Cpolygon points='20.8,20.8 63.2,20.8 63.2,63.2 20.8,63.2'/%3E%3Ccircle cx='42' cy='42' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  /* النسخة الفاتحة للأقسام الداكنة */
+  --pat-geo-light:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='1'%3E%3Cpolygon points='42,12 72,42 42,72 12,42'/%3E%3Cpolygon points='20.8,20.8 63.2,20.8 63.2,63.2 20.8,63.2'/%3E%3Ccircle cx='42' cy='42' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  /* ملمس ورقي ناعم جدًّا */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* ملمس ورقي خفيف يغطّي الصفحة كاملة دون أن يعترض النقر (طبقة علوية شفّافة جدًّا) */
+body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:var(--grain);background-size:200px 200px;opacity:.02;mix-blend-mode:multiply}
+
+/* طبقة الزخرفة الهندسية — تُستعمَل عبر pseudo خلف المحتوى */
+.geo-layer{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:var(--pat-geo);
+  background-size:84px 84px;opacity:.05;-webkit-mask-image:radial-gradient(120% 90% at 50% 0,#000 30%,transparent 78%);
+  mask-image:radial-gradient(120% 90% at 50% 0,#000 30%,transparent 78%)}
+/* الأقسام الداكنة تبقى نظيفة: تُخفى الزخرفة الهندسية والعلامة المائية الكبيرة */
+.dark .geo-layer{display:none}
+.dark .wm{display:none}
+/* رفع المحتوى فوق الزخرفة */
+.hero .wrap,.dark .wrap,.sec .wrap{position:relative;z-index:1}
+
+/* نجمة زخرفية خلف صورة البطل */
+.hero-art::before{content:"";position:absolute;width:min(560px,108%);aspect-ratio:1;border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(236,33,39,.06),transparent 60%),
+    var(--pat-geo);
+  background-size:auto,72px 72px;opacity:.5;z-index:-1;
+  -webkit-mask-image:radial-gradient(circle,#000 38%,transparent 70%);mask-image:radial-gradient(circle,#000 38%,transparent 70%);
+  animation:spin 90s linear infinite}
+@media (prefers-reduced-motion:reduce){.hero-art::before{animation:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ========== فاصل زخرفي (نجمة ثمانية بين خطّين) ========== */
+.ornament{display:flex;align-items:center;justify-content:center;gap:18px;
+  max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,4.5vw,40px);
+  margin-block:clamp(6px,2vw,18px)}
+.ornament::before,.ornament::after{content:"";height:1px;flex:1;max-width:230px;
+  background:linear-gradient(var(--_d,90deg),transparent,var(--line-2))}
+.ornament::after{--_d:270deg}
+.ornament svg{width:30px;height:30px;color:var(--red);flex:none;opacity:.9}
+.dark .ornament::before,.dark .ornament::after{background:linear-gradient(var(--_d,90deg),transparent,var(--line-dark))}
+
+/* ========== لمسات تفاعلية دقيقة ========== */
+/* خطّ متحرّك أسفل روابط القائمة */
+.menu a{position:relative}
+.menu a::after{content:"";position:absolute;inset-inline:14px;bottom:5px;height:2px;border-radius:2px;
+  background:var(--red);transform:scaleX(0);transform-origin:center;transition:transform .28s cubic-bezier(.2,.7,.2,1);opacity:.0}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1);opacity:1}
+
+/* لمعان ناعم يمرّ على البطاقات عند المرور */
+.card,.role,.step,.feat,.track,.lcell{position:relative;overflow:hidden}
+.card::after,.role::after,.step::after{content:"";position:absolute;top:0;inset-inline-start:-60%;width:45%;height:100%;
+  background:linear-gradient(110deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);
+  opacity:0;transition:none;pointer-events:none}
+.card:hover::after,.role:hover::after,.step:hover::after{opacity:1;animation:sheen .8s ease}
+@keyframes sheen{from{inset-inline-start:-60%}to{inset-inline-start:120%}}
+@media (prefers-reduced-motion:reduce){.card:hover::after,.role:hover::after,.step:hover::after{animation:none;opacity:0}}
+
+/* خطّ الـ eyebrow ينمو عند الظهور */
+.reveal .eyebrow::before{transition:width .6s .15s cubic-bezier(.2,.7,.2,1)}
+.reveal:not(.in) .eyebrow::before{width:0}
+
+/* توهّج لطيف حول الأيقونات عند مرور البطاقة */
+.card:hover .icon,.feat:hover .fi{box-shadow:0 0 0 6px rgba(236,33,39,.08);transition:box-shadow .3s}
+</style>
+
+<style>
+/* ============================================================
+   REDESIGN · المنهجية / المحتوى والمحاور / الحلول
+   ============================================================ */
+
+/* ---------- Methodology: levels ladder ---------- */
+.m-levels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.m-step{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-sm);transition:.28s}
+.m-step:hover{border-color:var(--red);box-shadow:var(--shadow);transform:translateY(-3px)}
+.m-badge{width:56px;height:56px;border-radius:15px;flex:none;display:grid;place-items:center;color:#fff;
+  font-family:'Cairo',sans-serif;font-weight:900;font-size:1.55rem;background:linear-gradient(150deg,var(--red),var(--red-deep));
+  box-shadow:0 12px 24px -13px rgba(236,33,39,.75)}
+.m-step:nth-child(1) .m-badge{opacity:.74}.m-step:nth-child(2) .m-badge{opacity:.82}
+.m-step:nth-child(3) .m-badge{opacity:.9}
+.m-stage{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.1rem;color:var(--ink);line-height:1.3}
+.m-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px}
+.m-chip{display:inline-flex;align-items:center;gap:6px;font-family:'Cairo',sans-serif;font-weight:600;font-size:.82rem;
+  padding:5px 12px;border-radius:30px;background:var(--paper-2);color:var(--ink-soft);border:1px solid var(--line)}
+.m-chip b{color:var(--muted);font-weight:700}
+.m-chip.voc{background:var(--red-tint);color:var(--red-deep);border-color:#F6CFD0}
+
+/* ---------- Methodology: two tracks ---------- */
+.m-tracks{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+.m-track{border-radius:var(--radius);padding:32px 30px;border:1px solid var(--line);background:var(--card);
+  box-shadow:var(--shadow-sm);transition:.3s}
+.m-track:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.m-track.dark2{background:var(--ink);border-color:var(--ink);color:var(--on-dark)}
+.m-th{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.m-tic{width:48px;height:48px;border-radius:13px;flex:none;display:grid;place-items:center;background:var(--red-tint);color:var(--red)}
+.m-track.dark2 .m-tic{background:rgba(236,33,39,.18);color:#FF6A6E}
+.m-tic svg{width:24px;height:24px}
+.m-no{font-family:'Cairo',sans-serif;font-weight:900;font-size:1.5rem;color:var(--red);line-height:1;margin-inline-start:auto}
+.m-track.dark2 .m-no{color:#FF6A6E}
+.m-track h3{font-size:1.35rem}.m-track.dark2 h3{color:#fff}
+.m-track dl{margin:14px 0 0;display:grid}
+.m-track .m-row{display:grid;grid-template-columns:108px 1fr;gap:14px;padding:13px 0;border-top:1px solid var(--line)}
+.m-track.dark2 .m-row{border-top-color:var(--line-dark)}
+.m-track dt{margin:0;font-family:'Cairo',sans-serif;font-weight:700;color:var(--muted);font-size:.9rem}
+.m-track.dark2 dt{color:var(--on-dark-mut)}
+.m-track dd{margin:0;color:var(--body);font-size:.98rem}.m-track.dark2 dd{color:var(--on-dark)}
+
+/* ---------- Methodology: 10-part lesson ---------- */
+.m-lesson{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:8px}
+.m-part{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:22px 14px;
+  text-align:center;transition:.25s}
+.m-part:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.m-pn{width:42px;height:42px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+  font-family:'Cairo',sans-serif;font-weight:900;font-size:1.05rem;color:var(--red);background:var(--red-tint);
+  border:1.5px solid #F6CFD0;transition:.25s}
+.m-part:hover .m-pn{background:var(--red);color:#fff;border-color:var(--red)}
+.m-pt{font-family:'Cairo',sans-serif;font-weight:600;font-size:.9rem;color:var(--ink);line-height:1.4}
+
+/* ---------- Content & Axes: overlay-title cards ---------- */
+.axesgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.axis2{border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow-sm);
+  transition:.3s;padding:26px;display:grid;grid-template-columns:124px 1fr;gap:22px;align-items:start}
+.axis2:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--red)}
+.axis2-media{width:124px;height:124px;border-radius:16px;overflow:hidden;border:1px solid var(--line);flex:none;background:var(--paper-2)}
+.axis2-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.axis2:hover .axis2-media img{transform:scale(1.05)}
+.axis2-head{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.axis2-ic{width:40px;height:40px;border-radius:11px;flex:none;display:grid;place-items:center;background:var(--red-tint);color:var(--red)}
+.axis2-ic svg{width:22px;height:22px}
+.axis2-head h3{color:var(--ink);font-size:1.2rem}
+.axis2-body .desc{color:var(--body);font-size:.97rem;margin-bottom:14px}
+@media(max-width:560px){.axis2{grid-template-columns:84px 1fr;padding:20px;gap:16px}.axis2-media{width:84px;height:84px;border-radius:13px}}
+
+/* ---------- Solutions: alternating media rows ---------- */
+.sol-rows{display:grid;gap:26px}
+.sol-row{display:flex;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow-sm);transition:.3s}
+.sol-row:hover{box-shadow:var(--shadow);border-color:var(--red)}
+.sol-row:nth-child(even){flex-direction:row-reverse}
+.sol-media{flex:0 0 42%;position:relative;min-height:300px;overflow:hidden}
+.sol-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.sol-row:hover .sol-media img{transform:scale(1.05)}
+.sol-num{position:absolute;top:16px;inset-inline-start:16px;z-index:1;width:42px;height:42px;border-radius:12px;
+  display:grid;place-items:center;background:rgba(236,33,39,.95);color:#fff;font-family:'Cairo',sans-serif;font-weight:900;font-size:1.15rem}
+.sol-content{flex:1;padding:clamp(28px,3.2vw,44px);display:flex;flex-direction:column;justify-content:center}
+.sol-content .tag{font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.1em;color:var(--red);font-weight:600;text-transform:uppercase}
+.sol-content h3{font-size:clamp(1.3rem,2.4vw,1.7rem);margin:8px 0 16px}
+.sol-content .need{color:var(--muted);font-size:.98rem;padding-bottom:16px;margin-bottom:16px;border-bottom:1px dashed var(--line-2);
+  display:flex;gap:10px}
+.sol-content .need::before{content:"";flex:none;width:4px;border-radius:3px;background:var(--line-2)}
+.sol-content .resp{color:var(--body);font-size:1.02rem;line-height:1.85}
+.sol-content .lnk{margin-top:20px;align-self:flex-start}
+
+@media(max-width:980px){.m-tracks{grid-template-columns:1fr}.m-lesson{grid-template-columns:repeat(3,1fr)}.axesgrid{grid-template-columns:1fr}}
+@media(max-width:860px){.sol-row,.sol-row:nth-child(even){flex-direction:column}.sol-media{flex:auto;min-height:0;aspect-ratio:16/9}}
+@media(max-width:680px){.m-levels{grid-template-columns:1fr}.m-lesson{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Content & Axes: modern interactive explorer ---------- */
+.axex{display:grid;grid-template-columns:320px 1fr;gap:26px;align-items:start}
+.axex-tabs{display:flex;flex-direction:column;gap:12px}
+.axex-tab{display:flex;align-items:center;gap:14px;text-align:start;cursor:pointer;width:100%;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px;
+  font-family:inherit;transition:.25s;position:relative}
+.axex-tab:hover{border-color:var(--red);transform:translateY(-2px)}
+.axex-tab.is-active{border-color:var(--red);background:linear-gradient(120deg,#fff,var(--red-tint));box-shadow:var(--shadow-sm)}
+.axex-ic{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;background:var(--red-tint);
+  color:var(--red);transition:.25s}
+.axex-tab.is-active .axex-ic{background:var(--red);color:#fff}
+.axex-ic svg{width:24px;height:24px}
+.axex-tt{display:flex;flex-direction:column;gap:1px;min-width:0}
+.axex-tt b{font-family:'Cairo',sans-serif;font-weight:800;font-size:1.12rem;color:var(--ink)}
+.axex-tt i{font-style:normal;font-size:.85rem;color:var(--muted)}
+.axex-tab::after{content:"";position:absolute;inset-inline-end:16px;width:8px;height:8px;border-inline-end:2px solid var(--red);
+  border-block-start:2px solid var(--red);transform:rotate(225deg);opacity:0;transition:.25s}
+.axex-tab.is-active::after{opacity:1}
+.axex-panel{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow-sm)}
+.axex-panel[hidden]{display:none}
+.axex-panel.is-active{animation:axfade .42s cubic-bezier(.2,.7,.2,1)}
+@keyframes axfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.axex-panel.is-active{animation:none}}
+.axex-media{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1/1;flex:none}
+.axex-media img{width:100%;height:100%;object-fit:cover;display:block}
+.axex-info .desc{font-size:1.06rem;color:var(--body);margin-bottom:18px;line-height:1.85}
+.axex-info .tags{margin-top:2px}
+@media(max-width:860px){
+  .axex{grid-template-columns:1fr}
+  .axex-tabs{flex-direction:row;flex-wrap:wrap}
+  .axex-tab{flex:1 1 44%}
+  .axex-tab::after{display:none}
+  .axex-panel{grid-template-columns:1fr}
+  .axex-media{max-width:300px;margin-inline:auto}
+}
+@media(max-width:480px){.axex-tab{flex-basis:100%}}
+
+/* ---------- Personalities layer (image + text) ---------- */
+.persona2{display:grid;grid-template-columns:300px 1fr;gap:0;border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--line);box-shadow:var(--shadow-sm);background:linear-gradient(120deg,#fff,#FBEFEF);margin-top:26px}
+.persona2 .p2-media{position:relative;min-height:240px;overflow:hidden}
+.persona2 .p2-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.persona2 .p2-body{padding:clamp(26px,3vw,40px);display:flex;flex-direction:column;justify-content:center}
+.persona2 .p2-tag{display:inline-flex;align-items:center;gap:8px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.82rem;
+  color:var(--red);margin-bottom:10px}
+.persona2 .p2-tag::before{content:"";width:18px;height:2px;background:var(--red);border-radius:2px}
+.persona2 h3{font-size:1.35rem}.persona2 p{color:var(--body);margin-top:10px;font-size:1.02rem}
+@media(max-width:760px){.persona2{grid-template-columns:1fr}.persona2 .p2-media{min-height:0;aspect-ratio:16/9}}
+</style>
+
+<!-- ===== Structured data (JSON-LD) ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bayan.almotahidaeducation.com/#org",
+      "name": "Almotahida Education Group",
+      "alternateName": "مجموعة المتحدة للتعليم",
+      "url": "https://bayan.almotahidaeducation.com/",
+      "logo": "https://bayan.almotahidaeducation.com/assets/logo-dark.png",
+      "email": "info@almotahidaeducation.com",
+      "description": "Developer of Bayan, an Arabic-literacy platform."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bayan.almotahidaeducation.com/#website",
+      "url": "https://bayan.almotahidaeducation.com/",
+      "name": "بَيَان · Bayan",
+      "inLanguage": ["ar", "en"],
+      "publisher": { "@id": "https://bayan.almotahidaeducation.com/#org" }
+    },
+    {
+      "@type": "Product",
+      "name": "Bayan — Arabic Literacy Platform",
+      "alternateName": "بَيَان — منصة القرائية العربية",
+      "brand": { "@id": "https://bayan.almotahidaeducation.com/#org" },
+      "description": "An Arabic-literacy platform: a graded journey across six levels, from kindergarten to university, building readers who think rather than merely decode.",
+      "category": "EducationalApplication",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": ["student", "teacher", "school", "ministry"]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How is Bayan different from other Arabic-teaching platforms?", "acceptedAnswer": { "@type": "Answer", "text": "Bayan focuses on literacy, not language teaching alone: its goal is to build comprehension, analysis and critique, across four knowledge axes and six precisely graded levels." } },
+        { "@type": "Question", "name": "Who is the platform designed for?", "acceptedAnswer": { "@type": "Answer", "text": "For private schools, ministries of education, teachers and students from kindergarten to university, with accounts and dashboards suited to each role." } },
+        { "@type": "Question", "name": "How is content accuracy ensured?", "acceptedAnswer": { "@type": "Answer", "text": "Every piece of content undergoes specialised academic review before publication, and sacred and classical texts are preserved as received." } },
+        { "@type": "Question", "name": "Does Bayan replace the school's curriculum?", "acceptedAnswer": { "@type": "Answer", "text": "No; it is designed to integrate with and align to existing curricula rather than compete with them." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#problem"><span class="t-ar">تخطَّ إلى المحتوى</span><span class="t-en">Skip to content</span></a>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="بَيَان — منصة القرائية العربية">
+      <img src="assets/logo-dark.png" alt="بَيَان — منصة القرائية العربية">
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#literacy"><span class="t-ar">القرائية</span><span class="t-en">Literacy</span></a>
+      <a href="#methodology"><span class="t-ar">المنهجية</span><span class="t-en">Methodology</span></a>
+      <a href="#content"><span class="t-ar">المحتوى</span><span class="t-en">Content</span></a>
+      <a href="#platform"><span class="t-ar">المنصة</span><span class="t-en">Platform</span></a>
+      <a href="#solutions"><span class="t-ar">الحلول</span><span class="t-en">Solutions</span></a>
+      <a href="#faq"><span class="t-ar">الأسئلة</span><span class="t-en">FAQ</span></a>
+    </nav>
+    <div class="nav-cta">
+      <button id="langBtn" class="lang" type="button" aria-label="Switch language"><span class="t-ar">EN</span><span class="t-en">ع</span></button>
+      <a href="#contact" class="btn btn-primary"><span class="t-ar">اطلب عرضًا</span><span class="t-en">Request a demo</span></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="geo-layer" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow t-ar">منصة القرائية العربية</span><span class="eyebrow t-en">Arabic Literacy Platform</span>
+      <h1 class="t-ar">حين تصبح القراءةُ <span class="em">فهمًا</span>.</h1>
+      <h1 class="t-en">Where reading becomes <span class="em">understanding</span>.</h1>
+      <p class="sub t-ar">منصة بَيَان للقرائية العربية — رحلةٌ متدرّجة عبر ستة مستويات، من رياض الأطفال إلى الجامعة، تبني القارئ المفكّر لا الناطق فحسب، بمحتوًى يصل المتعلّم بهويّته وعالمه.</p>
+      <p class="sub t-en">Bayan is an Arabic-literacy platform — a graded journey across six levels, from kindergarten to university, building readers who think rather than merely decode, through content that connects learners to their identity and world.</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-primary"><span class="t-ar">اطلب عرضًا تعريفيًّا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+        <a href="#methodology" class="btn btn-line"><span class="t-ar">استكشف المنهجية</span><span class="t-en">Explore the methodology</span></a>
+      </div>
+      <div class="micro">
+        <span class="t-ar"><b>٦</b> مستويات قرائية</span><span class="t-en"><b>6</b> reading levels</span>
+        <span class="t-ar"><b>٤</b> محاور معرفية</span><span class="t-en"><b>4</b> knowledge axes</span>
+        <span class="t-ar"><b>١٠</b> أقسام للدرس</span><span class="t-en"><b>10</b> lesson parts</span>
+      </div>
+    </div>
+    <div class="hero-art reveal has-photo">
+      <figure class="hero-photo"><img src="assets/hero.jpg" alt="طفلِ منهمكِ في قراءة كتاب" loading="eager" decoding="async"></figure>
+      <div class="tagchip"><i>◆</i> <span class="t-ar">القراءة وسيلة · القرائية غاية</span><span class="t-en">Reading is the means · literacy the end</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust">
+  <div class="wrap">
+    <div class="cell"><div class="n"><span class="t-ar">٦</span><span class="t-en">6</span></div><div class="t t-ar">مستويات قرائية متدرّجة</div><div class="t t-en">Six graded levels</div></div>
+    <div class="cell"><div class="n"><span class="t-ar">٤</span><span class="t-en">4</span></div><div class="t t-ar">محاور معرفية متكاملة</div><div class="t t-en">Four knowledge axes</div></div>
+    <div class="cell"><div class="n"><span class="t-ar">٢</span><span class="t-en">2</span></div><div class="t t-ar">مساران: مؤلَّف وأصيل</div><div class="t t-en">Authored &amp; authentic</div></div>
+    <div class="cell"><div class="n">✓</div><div class="t t-ar">عربية فصحى مراجَعة علميًّا</div><div class="t t-en">Academically reviewed</div></div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec problem" id="problem">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow t-ar">المشكلة في سطور</span><span class="eyebrow t-en">The gap</span>
+      <p class="big t-ar" style="margin-top:16px">يُتقن كثيرٌ من المتعلّمين فكّ الرموز ونطقها، لكنّهم يعجزون عن <em>فهم</em> ما يقرؤون أو تحليله أو الإفادة منه.</p>
+      <p class="big t-en" style="margin-top:16px">Many learners can decode and pronounce words, yet cannot <em>understand</em>, analyse or use what they read.</p>
+    </div>
+    <div class="reveal">
+      <p class="t-ar">هذه الفجوة — بين القراءة الآلية والفهم الحقيقي — لا تُضعف اللغة وحدها، بل تمتدّ إلى كلّ مادةٍ تُدرَّس بالعربية؛ إذ يقف ضعف القرائية حائلًا بين المتعلّم وبين العلوم والرياضيات والدراسات الاجتماعية على حدٍّ سواء.</p>
+      <p class="t-en">This gap — between mechanical reading and genuine comprehension — weakens not only language but every subject taught in Arabic; weak literacy stands between the learner and science, mathematics and social studies alike.</p>
+      <p class="t-ar">ويضاعف من حدّتها ندرةُ المحتوى العربيّ المتدرّج المبنيّ على أسسٍ علمية: فالمعلّم يؤلّف مادته بنفسه أو يستعير نصوصًا غير مضبوطة المستوى، والمدرسة تفتقر إلى منهجٍ قرائيٍّ متّسق عبر المراحل.</p>
+      <p class="t-en">It is widened by a scarcity of graded, research-based Arabic content: teachers often author their own material or borrow texts of uneven level, and schools lack a coherent literacy curriculum across stages.</p>
+      <a href="#literacy" class="lnk"><span class="t-ar">ما الفرق بين القراءة والقرائية؟ <span class="x">←</span></span><span class="t-en">What is the difference between reading and literacy? <span class="x">→</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ READING VS LITERACY (DARK) ============ -->
+<section class="sec dark" id="literacy">
+  <img src="assets/logo-light.png" class="wm" alt="">
+  <div class="geo-layer" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">القراءة مقابل القرائية</span><span class="eyebrow t-en">Reading vs Literacy</span>
+      <h2 class="t-ar">هل يكفي أن يقرأ طفلك؟</h2>
+      <h2 class="t-en">Is it enough that your child can read?</h2>
+    </div>
+    <div class="litdefs reveal">
+      <div class="d">
+        <div class="k"><span class="t-ar">القراءة <small>Reading</small></span><span class="t-en">Reading</span></div>
+        <p class="t-ar">مهارةٌ آليةٌ هي القدرة على فكّ رموز الكلمات ونطقها سليمةً؛ شرطٌ لازمٌ لكنّه غير كافٍ، إذ قد يقرأ المرء النصّ كاملًا دون أن يفهم مغزاه.</p>
+        <p class="t-en">A mechanical skill — the ability to decode and pronounce words correctly; necessary but not sufficient, since one may read an entire text without grasping its meaning.</p>
+      </div>
+      <div class="d is-lit">
+        <div class="k"><span class="t-ar">القرائية <small>Literacy</small></span><span class="t-en">Literacy</span></div>
+        <p class="t-ar">أوسع وأعمق — القدرة على فهم النصّ وتحليله ونقده وتوظيفه، والتفاعل معه تذوّقًا واستنتاجًا وربطًا بالسياق.</p>
+        <p class="t-en">Broader and deeper — the ability to understand, analyse, critique and use a text, engaging with it through appreciation, inference and context.</p>
+      </div>
+    </div>
+    <div class="tbl-wrap reveal">
+      <table class="t">
+        <thead><tr>
+          <th><span class="t-ar">وجه المقارنة</span><span class="t-en">Aspect</span></th>
+          <th><span class="t-ar">القراءة</span><span class="t-en">Reading</span></th>
+          <th class="hi"><span class="t-ar">القرائية</span><span class="t-en">Literacy</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="hd"><span class="t-ar">الطبيعة</span><span class="t-en">Nature</span></td><td><span class="t-ar">مهارة آلية</span><span class="t-en">A mechanical skill</span></td><td><span class="t-ar">كفاية معرفية وعقلية</span><span class="t-en">A cognitive competence</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">الهدف</span><span class="t-en">Goal</span></td><td><span class="t-ar">نطق الكلمات سليمةً</span><span class="t-en">Pronouncing words correctly</span></td><td><span class="t-ar">فهم النصّ وتحليله ونقده</span><span class="t-en">Understanding, analysing &amp; critiquing</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">المخرَج</span><span class="t-en">Output</span></td><td><span class="t-ar">قارئٌ ناطق</span><span class="t-en">A reader who pronounces</span></td><td><span class="t-ar">قارئٌ مفكّرٌ ومنتِج</span><span class="t-en">A thinking, producing reader</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">بالمعنى</span><span class="t-en">Meaning</span></td><td><span class="t-ar">قد تنفصل عن المعنى</span><span class="t-en">May be detached from meaning</span></td><td><span class="t-ar">تقوم على المعنى والسياق</span><span class="t-en">Built on meaning &amp; context</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">في بَيَان</span><span class="t-en">In Bayan</span></td><td><span class="t-ar">نقطة الانطلاق</span><span class="t-en">The starting point</span></td><td><span class="t-ar">الغاية المقصودة</span><span class="t-en">The intended goal</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pull reveal">
+      <p class="q t-ar">القراءة شرطٌ لازم، والقرائية هي <b>الثمرة</b>. بَيَان لا تُعلّم الطفل أن يقرأ فحسب، بل أن يفهم ويحاور ويبني.</p>
+      <p class="q t-en">Reading is necessary; literacy is the <b>fruit</b>. Bayan teaches a child not only to read, but to understand, question and build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sec bg2" id="how">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">كيف تعمل بَيَان</span><span class="eyebrow t-en">How it works</span>
+      <h2 class="t-ar">من اختيار النصّ إلى قياس الفهم</h2>
+      <h2 class="t-en">From choosing a text to measuring comprehension</h2>
+      <p class="lead t-ar">ثلاث خطواتٍ تأخذ المتعلّم من النصّ المناسب لمستواه إلى فهمٍ يُقاس ويُتابَع.</p>
+      <p class="lead t-en">Three steps that take the learner from a text matched to their level to comprehension that is measured and tracked.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="num"><span class="t-ar">١</span><span class="t-en">1</span></div><h3 class="t-ar">اختر المسار والموضوع</h3><h3 class="t-en">Choose the track and topic</h3><p class="t-ar">تختار المحور والموضوع والشخصية المرتبطة به، فيُبنى الدرس حول اهتمام المتعلّم وهويّته.</p><p class="t-en">You pick the axis, topic and a related figure, and the lesson is built around the learner's interest and identity.</p></div>
+      <div class="step reveal"><div class="num"><span class="t-ar">٢</span><span class="t-en">2</span></div><h3 class="t-ar">يقدّم بَيَان النصّ</h3><h3 class="t-en">Bayan presents the text</h3><p class="t-ar">يُعرض النصّ بمستوى المتعلّم تمامًا، مصحوبًا بالمفردات والإعراب والأساليب والتحليل البلاغي.</p><p class="t-en">The text appears at exactly the learner's level, accompanied by vocabulary, parsing, styles and rhetorical analysis.</p></div>
+      <div class="step reveal"><div class="num"><span class="t-ar">٣</span><span class="t-en">3</span></div><h3 class="t-ar">يُقاس الفهم ويُتابَع</h3><h3 class="t-en">Comprehension is measured &amp; tracked</h3><p class="t-ar">أنشطةٌ واختبارٌ بعديّ يقيسان الفهم، وتُتابَع نتائج المتعلّم وتقدّمه عبر المستويات.</p><p class="t-en">Activities and a post-test measure understanding, and the learner's results and progress are tracked across levels.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="sec" id="methodology">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">المنهجية</span><span class="eyebrow t-en">Methodology</span>
+      <h2 class="t-ar">ستة مستويات ومساران وبناءٌ دقيق للدرس</h2>
+      <h2 class="t-en">Six levels, two tracks and a precise lesson structure</h2>
+      <p class="lead t-ar">لا يقتصر التدرّج على طول النصّ، بل يشمل عمق الأفكار وكثافة المفردات ونوع الأسلوب ودرجة الضبط بالشكل — فيُقدَّم لكلّ متعلّمٍ نصٌّ في منطقة نموّه القريبة.</p>
+      <p class="lead t-en">Progression is not only about text length but the depth of ideas, vocabulary density, style and degree of vocalisation — so each learner meets a text within their zone of proximal growth.</p>
+    </div>
+
+    <h3 class="subh"><span class="t-ar">ستة مستويات قرائية</span><span class="t-en">Six reading levels</span></h3>
+    <div class="m-levels">
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">١</span><span class="t-en">1</span></div>
+        <div><div class="m-stage"><span class="t-ar">رياض الأطفال / مبكّر</span><span class="t-en">Kindergarten / early</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">سردي</span><span class="t-en">Narrative</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">كامل</span><span class="t-en">Full</span></span></div></div>
+      </div>
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">٢</span><span class="t-en">2</span></div>
+        <div><div class="m-stage"><span class="t-ar">ابتدائي مبكّر</span><span class="t-en">Early primary</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">سردي</span><span class="t-en">Narrative</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">كامل</span><span class="t-en">Full</span></span></div></div>
+      </div>
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">٣</span><span class="t-en">3</span></div>
+        <div><div class="m-stage"><span class="t-ar">ابتدائي</span><span class="t-en">Primary</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">سردي</span><span class="t-en">Narrative</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">كامل</span><span class="t-en">Full</span></span></div></div>
+      </div>
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">٤</span><span class="t-en">4</span></div>
+        <div><div class="m-stage"><span class="t-ar">إعدادي</span><span class="t-en">Preparatory</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">تفسيري / معلوماتي</span><span class="t-en">Expository / informational</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">إلزامي</span><span class="t-en">Required</span></span></div></div>
+      </div>
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">٥</span><span class="t-en">5</span></div>
+        <div><div class="m-stage"><span class="t-ar">ثانوي</span><span class="t-en">Secondary</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">تفسيري</span><span class="t-en">Expository</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">منطقة وسطى</span><span class="t-en">Mid-range</span></span></div></div>
+      </div>
+      <div class="m-step reveal">
+        <div class="m-badge"><span class="t-ar">٦</span><span class="t-en">6</span></div>
+        <div><div class="m-stage"><span class="t-ar">جامعي</span><span class="t-en">University</span></div>
+          <div class="m-chips"><span class="m-chip"><b><span class="t-ar">النصّ</span><span class="t-en">Text</span></b><span class="t-ar">حجاجي / نقدي</span><span class="t-en">Argumentative / critical</span></span><span class="m-chip voc"><b><span class="t-ar">الضبط</span><span class="t-en">Vocalisation</span></b><span class="t-ar">مخفّف</span><span class="t-en">Light</span></span></div></div>
+      </div>
+    </div>
+    <p class="tnote"><span class="t-ar">تبقى النصوص القرآنية مضبوطةً كما وردت في مصدرها دون أيّ تخفيفٍ للشكل في أيّ مستوى.</span><span class="t-en">Qur'anic texts remain fully vocalised as in their source, with no reduction at any level.</span></p>
+
+    <h3 class="subh" style="margin-top:54px"><span class="t-ar">مساران للمحتوى</span><span class="t-en">Two content tracks</span></h3>
+    <div class="m-tracks">
+      <div class="m-track reveal">
+        <div class="m-th">
+          <span class="m-tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+          <h3 class="t-ar">المسار التوليدي</h3><h3 class="t-en">Generative track</h3>
+          <span class="m-no"><span class="t-ar">٠١</span><span class="t-en">01</span></span>
+        </div>
+        <dl>
+          <div class="m-row"><dt><span class="t-ar">الطبيعة</span><span class="t-en">Nature</span></dt><dd><span class="t-ar">محتوًى مؤلَّف تربويًّا</span><span class="t-en">Pedagogically authored content</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">التغطية</span><span class="t-en">Coverage</span></dt><dd><span class="t-ar">الموضوع الواحد عبر المستويات الستة</span><span class="t-en">One topic across all six levels</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">الأمثلة</span><span class="t-en">Examples</span></dt><dd><span class="t-ar">موضوعات علمية وإنسانية</span><span class="t-en">Scientific and humanities topics</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">النصّ</span><span class="t-en">Text</span></dt><dd><span class="t-ar">يُصاغ تربويًّا بما يناسب كلّ مستوى</span><span class="t-en">Composed pedagogically for each level</span></dd></div>
+        </dl>
+      </div>
+      <div class="m-track dark2 reveal">
+        <div class="m-th">
+          <span class="m-tic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></span>
+          <h3 class="t-ar">المسار الأصيل</h3><h3 class="t-en">Authentic track</h3>
+          <span class="m-no"><span class="t-ar">٠٢</span><span class="t-en">02</span></span>
+        </div>
+        <dl>
+          <div class="m-row"><dt><span class="t-ar">الطبيعة</span><span class="t-en">Nature</span></dt><dd><span class="t-ar">نصوص مصدرية موثّقة</span><span class="t-en">Documented source texts</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">التغطية</span><span class="t-en">Coverage</span></dt><dd><span class="t-ar">درسٌ بمستوًى واحد يختاره المتخصّص</span><span class="t-en">A single-level lesson chosen by a specialist</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">الأمثلة</span><span class="t-en">Examples</span></dt><dd><span class="t-ar">قرآن، حديث، شعر، نثر تراثي، حكايات</span><span class="t-en">Qur'an, hadith, poetry, classical prose, tales</span></dd></div>
+          <div class="m-row"><dt><span class="t-ar">النصّ</span><span class="t-en">Text</span></dt><dd><span class="t-ar">يُصان كما ورد دون تعديل</span><span class="t-en">Preserved as received, without alteration</span></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <h3 class="subh" style="margin-top:54px"><span class="t-ar">بناء الدرس في عشرة أقسام</span><span class="t-en">The 10-part lesson</span></h3>
+    <div class="m-lesson">
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">١</span><span class="t-en">1</span></div><div class="m-pt"><span class="t-ar">النصّ الأصلي</span><span class="t-en">Source text</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٢</span><span class="t-en">2</span></div><div class="m-pt"><span class="t-ar">النصّ مضبوطًا بالشكل</span><span class="t-en">Fully vocalised text</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٣</span><span class="t-en">3</span></div><div class="m-pt"><span class="t-ar">أسئلة ما قبل القراءة</span><span class="t-en">Pre-reading questions</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٤</span><span class="t-en">4</span></div><div class="m-pt"><span class="t-ar">المفردات وأمثلتها</span><span class="t-en">Vocabulary &amp; examples</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٥</span><span class="t-en">5</span></div><div class="m-pt"><span class="t-ar">الإعراب</span><span class="t-en">Parsing (iʿrāb)</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٦</span><span class="t-en">6</span></div><div class="m-pt"><span class="t-ar">الأساليب اللغوية</span><span class="t-en">Linguistic styles</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٧</span><span class="t-en">7</span></div><div class="m-pt"><span class="t-ar">التحليل البلاغي</span><span class="t-en">Rhetorical analysis</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٨</span><span class="t-en">8</span></div><div class="m-pt"><span class="t-ar">عناصر بناء الموضوع</span><span class="t-en">Composition elements</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">٩</span><span class="t-en">9</span></div><div class="m-pt"><span class="t-ar">الاختبار البعدي</span><span class="t-en">Post-test</span></div></div>
+      <div class="m-part reveal"><div class="m-pn"><span class="t-ar">١٠</span><span class="t-en">10</span></div><div class="m-pt"><span class="t-ar">الأنشطة التطبيقية</span><span class="t-en">Applied activities</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTENT & AXES ============ -->
+<section class="sec bg2" id="content">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">المحتوى والمحاور</span><span class="eyebrow t-en">Content &amp; Axes</span>
+      <h2 class="t-ar">أربعة محاورٍ تجعل النصّ نافذةً على المعرفة والهوية</h2>
+      <h2 class="t-en">Four axes that turn a text into a window on knowledge and identity</h2>
+      <p class="lead t-ar">يُعالَج كلُّ موضوعٍ من خلال أربعة محاورٍ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل صلةً بالجذور والحضارة والمعرفة والمرجعية.</p>
+      <p class="lead t-en">Every topic is treated through four integrated axes, so the text is not merely something to read but a link to roots, civilisation, knowledge and reference.</p>
+    </div>
+    <noscript><style>.axex-panel[hidden]{display:grid!important}</style></noscript>
+    <div class="axex reveal" id="axex">
+      <div class="axex-tabs" role="tablist" aria-label="المحاور المعرفية">
+        <button type="button" class="axex-tab is-active" role="tab" aria-selected="true" aria-controls="ax-local">
+          <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span>
+          <span class="axex-tt"><b class="t-ar">المحلي</b><b class="t-en">Local</b><i class="t-ar">الهوية والجذور</i><i class="t-en">Identity &amp; roots</i></span>
+        </button>
+        <button type="button" class="axex-tab" role="tab" aria-selected="false" aria-controls="ax-historical">
+          <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21h16M5 21V9m4 12V9m6 12V9m4 12V9M3 9h18L12 3 3 9z"/></svg></span>
+          <span class="axex-tt"><b class="t-ar">الحضاري</b><b class="t-en">Historical</b><i class="t-ar">نوافذ على الحضارات</i><i class="t-en">Windows on civilisations</i></span>
+        </button>
+        <button type="button" class="axex-tab" role="tab" aria-selected="false" aria-controls="ax-subject">
+          <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(120 12 12)"/></svg></span>
+          <span class="axex-tt"><b class="t-ar">الموضوعي</b><b class="t-en">Subject</b><i class="t-ar">المعرفة المنظَّمة</i><i class="t-en">Organised knowledge</i></span>
+        </button>
+        <button type="button" class="axex-tab" role="tab" aria-selected="false" aria-controls="ax-islamic">
+          <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v6m0 0a4 4 0 1 0 4 4M4 21V11l8-2 8 2v10M9 21v-4h6v4"/></svg></span>
+          <span class="axex-tt"><b class="t-ar">الإسلامي</b><b class="t-en">Islamic</b><i class="t-ar">المرجعية الأصيلة</i><i class="t-en">The authentic reference</i></span>
+        </button>
+      </div>
+      <div class="axex-panels">
+        <div class="axex-panel is-active" id="ax-local" role="tabpanel">
+          <figure class="axex-media"><img src="assets/img-local.jpg" alt="مدينة عربية بمساجد وعمارة تقليدية ونخيل" loading="lazy" decoding="async"></figure>
+          <div class="axex-info">
+            <p class="desc t-ar">يربط المتعلّم بهويّته القُطرية والعربية، بتدرّجٍ في العمق يراعي خصوصية كلّ قُطر.</p>
+            <p class="desc t-en">Connects the learner to their national and Arab identity, deepening gradually with respect for each country's specificity.</p>
+            <div class="tags"><span class="t-ar">الحضارة والعادات</span><span class="t-en">Civilisation &amp; customs</span><span class="t-ar">الأعياد</span><span class="t-en">Holidays</span><span class="t-ar">المعالم</span><span class="t-en">Landmarks</span><span class="t-ar">الملابس</span><span class="t-en">Dress</span><span class="t-ar">العملة</span><span class="t-en">Currency</span><span class="t-ar">شخصيات</span><span class="t-en">Figures</span><span class="t-ar">التاريخ والجغرافيا</span><span class="t-en">History &amp; geography</span><span class="t-ar">الأطعمة والمهن</span><span class="t-en">Food &amp; professions</span><span class="t-ar">الفنون والآداب المحلية</span><span class="t-en">Local arts &amp; literature</span></div>
+          </div>
+        </div>
+        <div class="axex-panel" id="ax-historical" role="tabpanel" hidden>
+          <figure class="axex-media"><img src="assets/img-historical.jpg" alt="حضارات كبرى: أعمدة ومبانٍ كلاسيكية ومعالم تاريخية" loading="lazy" decoding="async"></figure>
+          <div class="axex-info">
+            <p class="desc t-ar">نوافذُ على الحضارات الكبرى التي صاغت الإنسانية، قديمها وحديثها.</p>
+            <p class="desc t-en">Windows onto the great civilisations that shaped humanity, ancient and modern.</p>
+            <div class="tags"><span class="t-ar">العربي الإسلامي</span><span class="t-en">Arab-Islamic</span><span class="t-ar">الفرعوني</span><span class="t-en">Pharaonic</span><span class="t-ar">الروماني</span><span class="t-en">Roman</span><span class="t-ar">اليوناني</span><span class="t-en">Greek</span><span class="t-ar">الصيني</span><span class="t-en">Chinese</span><span class="t-ar">الهندي</span><span class="t-en">Indian</span><span class="t-ar">العصر الحديث</span><span class="t-en">The modern era</span></div>
+          </div>
+        </div>
+        <div class="axex-panel" id="ax-subject" role="tabpanel" hidden>
+          <figure class="axex-media"><img src="assets/img-subject.jpg" alt="رموز العلوم والمعرفة: ذرّة وفرجار وأدوات في إطار دائري" loading="lazy" decoding="async"></figure>
+          <div class="axex-info">
+            <p class="desc t-ar">المعرفة المنظَّمة عبر فرعين كبيرين: العلوم والتقنية، والعلوم الإنسانية والاجتماعية والفنون والآداب.</p>
+            <p class="desc t-en">Organised knowledge across two broad branches: science and technology, and the humanities, social sciences, arts and letters.</p>
+            <div class="tags"><span class="t-ar">STEM — علوم</span><span class="t-en">STEM — Science</span><span class="t-ar">رياضيات</span><span class="t-en">Mathematics</span><span class="t-ar">تكنولوجيا</span><span class="t-en">Technology</span><span class="t-ar">هندسة</span><span class="t-en">Engineering</span><span class="t-ar">HASS — إنسانيات</span><span class="t-en">HASS — Humanities</span><span class="t-ar">فنون</span><span class="t-en">Arts</span><span class="t-ar">آداب</span><span class="t-en">Letters</span></div>
+          </div>
+        </div>
+        <div class="axex-panel" id="ax-islamic" role="tabpanel" hidden>
+          <figure class="axex-media"><img src="assets/img-islamic.jpg" alt="مصحفٌ مفتوح وهلال وزخرفة إسلامية" loading="lazy" decoding="async"></figure>
+          <div class="axex-info">
+            <p class="desc t-ar">يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة، ويُؤلَّف وفق ضوابط دقيقة.</p>
+            <p class="desc t-en">Connects the learner to their Islamic reference through its authentic texts, authored under precise controls.</p>
+            <div class="tags"><span class="t-ar">القرآن الكريم</span><span class="t-en">The Holy Qur'an</span><span class="t-ar">الحديث النبوي</span><span class="t-en">Prophetic hadith</span><span class="t-ar">الفقه الإسلامي</span><span class="t-en">Islamic jurisprudence</span><span class="t-ar">السيرة النبوية</span><span class="t-en">The Prophetic biography</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="persona2 reveal">
+      <div class="p2-media"><img src="assets/img-personalities.jpg" alt="شخصيات ملهمة من العلم والأدب والتاريخ" loading="lazy" decoding="async"></div>
+      <div class="p2-body">
+        <span class="p2-tag"><span class="t-ar">طبقة عابرة للمحاور</span><span class="t-en">Cross-cutting layer</span></span>
+        <h3 class="t-ar">طبقة الشخصيات</h3><h3 class="t-en">Personalities layer</h3>
+        <p class="t-ar">تتقاطع مع المحاور الأربعة طبقةٌ من الشخصيات المصنّفة (علمية، سياسية، أدبية، فنية، دينية، اجتماعية، رياضية…)، تقرن كلَّ موضوعٍ بشخصيةٍ ذات صلة؛ فيلتقي المتعلّم في درس الفلك بعالِمٍ فلكيٍّ، وفي درس الشعر بشاعر — فيغدو التعلّم أقرب إلى القصة منه إلى التلقين.</p>
+        <p class="t-en">Cutting across the four axes is a layer of figures classified by type (scientific, political, literary, artistic, religious, social, sporting…), pairing every topic with a relevant figure — so in an astronomy lesson the learner meets an astronomer, and in a poetry lesson, a poet — making learning closer to a story than to rote.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATFORM ============ -->
+<section class="sec platform" id="platform">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">المنصة والمزايا</span><span class="eyebrow t-en">Platform &amp; Features</span>
+      <h2 class="t-ar">بيئةٌ رقمية متكاملة تخدم كلّ دورٍ بما يناسبه</h2>
+      <h2 class="t-en">An integrated digital environment serving every role</h2>
+      <p class="lead t-ar">المتعلّم يقرأ ويتفاعل، والمعلّم يكلّف ويقيّم ويتابع، وإدارة المدرسة أو الوزارة ترصد الأداء على مستوى الصفوف والمدارس.</p>
+      <p class="lead t-en">Learners read and engage; teachers assign, assess and track; school or ministry administrators monitor performance across classes and schools.</p>
+    </div>
+
+    <div class="roles">
+      <div class="role reveal"><div class="rt"><span class="dot"></span><h3 class="t-ar">الطالب</h3><h3 class="t-en">Student</h3></div><p class="t-ar">يدخل مكتبة النصوص بمستواه، يقرأ ويتفاعل مع المفردات والتحليل، يؤدّي الأنشطة والاختبارات، ويتابع تقدّمه عبر المستويات.</p><p class="t-en">Enters the text library at their level, reads and engages with vocabulary and analysis, completes activities and tests, and tracks progress across levels.</p></div>
+      <div class="role reveal"><div class="rt"><span class="dot"></span><h3 class="t-ar">المعلّم</h3><h3 class="t-en">Teacher</h3></div><p class="t-ar">يختار النصوص ويكلّف بها، يصحّح الأنشطة المقالية ويترك ملاحظات، يطّلع على لوحة أداء صفّه، ويواءم المحتوى مع منهجه.</p><p class="t-en">Selects and assigns texts, grades essay activities and leaves feedback, views a class-performance dashboard, and aligns content with their curriculum.</p></div>
+      <div class="role reveal"><div class="rt"><span class="dot"></span><h3 class="t-ar">إدارة المدرسة</h3><h3 class="t-en">School administration</h3></div><p class="t-ar">تتابع أداء الصفوف والمعلمين، ترصد التقدّم مقابل أهداف القسم، وتدير الحسابات والاشتراكات.</p><p class="t-en">Tracks the performance of classes and teachers, monitors progress against department goals, and manages accounts and subscriptions.</p></div>
+      <div class="role reveal"><div class="rt"><span class="dot"></span><h3 class="t-ar">الوزارة / الجهة</h3><h3 class="t-en">Ministry / authority</h3></div><p class="t-ar">تطّلع على لوحاتٍ تجميعية عبر المدارس، وتقيس مهارات القرائية بمعايير موحّدة على نطاقٍ واسع.</p><p class="t-en">Views aggregate dashboards across schools and measures literacy skills with unified standards at scale.</p></div>
+    </div>
+
+    <div class="pcols">
+      <div class="featlist reveal">
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18M7 14l3-3 3 3 5-6"/></svg></span>
+          <div><h4 class="t-ar">لوحات التتبّع والتقارير</h4><h4 class="t-en">Dashboards &amp; reporting</h4><p class="t-ar">لوحةٌ للمتعلّم (المسار والإنجاز ونقاط الفهم)، وللمعلّم (أداء كلّ طالبٍ وصفٍّ ونتائج تلقائية)، وللإدارة/الوزارة (تقارير تجميعية قابلة للتصدير تدعم القرار).</p><p class="t-en">A learner dashboard (path, achievement and comprehension points), a teacher dashboard (each student's and class's performance with automatic results), and an admin/ministry dashboard (exportable aggregate reports that support decisions).</p></div>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span>
+          <div><h4 class="t-ar">التكامل والدخول الموحّد</h4><h4 class="t-en">Integration &amp; SSO</h4><p class="t-ar">تكاملٌ مع أنظمة إدارة التعلّم (LMS) وأدوات الصفوف الرقمية، ودخولٌ موحّد (SSO) حيثما توافر، وإدارةٌ مبسّطة للقوائم الصفّية.</p><p class="t-en">Integration with learning-management systems (LMS) and digital-classroom tools, single sign-on (SSO) where available, and simplified roster management.</p></div>
+        </div>
+        <div class="feat">
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          <div><h4 class="t-ar">استجابةٌ كاملة وإتاحة</h4><h4 class="t-en">Fully responsive &amp; accessible</h4><p class="t-ar">تعمل على الحاسوب واللوح والجوال، وتدعم الإتاحة (Accessibility) عبر قارئ الشاشة والتنقّل بلوحة المفاتيح.</p><p class="t-en">Works on desktop, tablet and mobile, and supports accessibility through screen readers and keyboard navigation.</p></div>
+        </div>
+      </div>
+
+      <div class="mock reveal" aria-label="Learner dashboard preview">
+        <div class="bar"><i></i><i></i><i></i><span class="ttl"><span class="t-ar">لوحة المتعلّم</span><span class="t-en">Learner dashboard</span></span></div>
+        <div class="body">
+          <div class="tiles">
+            <div class="tile"><div class="lab"><span class="t-ar">المستوى الحالي</span><span class="t-en">Current level</span></div><div class="val red"><span class="t-ar">٤</span><span class="t-en">4</span></div></div>
+            <div class="tile"><div class="lab"><span class="t-ar">نصوص مقروءة</span><span class="t-en">Texts read</span></div><div class="val"><span class="t-ar">٢٧</span><span class="t-en">27</span></div></div>
+            <div class="tile"><div class="lab"><span class="t-ar">أنشطة مكتملة</span><span class="t-en">Activities done</span></div><div class="val"><span class="t-ar">١٩</span><span class="t-en">19</span></div></div>
+          </div>
+          <div class="lvls">
+            <div class="lv"><span class="nm"><span class="t-ar">المستوى ١</span><span class="t-en">Level 1</span></span><span class="track-bar"><i style="width:100%"></i></span></div>
+            <div class="lv"><span class="nm"><span class="t-ar">المستوى ٢</span><span class="t-en">Level 2</span></span><span class="track-bar"><i style="width:100%"></i></span></div>
+            <div class="lv"><span class="nm"><span class="t-ar">المستوى ٣</span><span class="t-en">Level 3</span></span><span class="track-bar"><i style="width:88%"></i></span></div>
+            <div class="lv"><span class="nm"><span class="t-ar">المستوى ٤</span><span class="t-en">Level 4</span></span><span class="track-bar"><i style="width:54%"></i></span></div>
+            <div class="lv"><span class="nm"><span class="t-ar">المستوى ٥</span><span class="t-en">Level 5</span></span><span class="track-bar"><i style="width:12%"></i></span></div>
+          </div>
+        </div>
+        <div class="cap"><span class="t-ar">نموذج توضيحي للواجهة</span><span class="t-en">Illustrative UI preview</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS ============ -->
+<section class="sec bg2" id="solutions">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">الحلول</span><span class="eyebrow t-en">Solutions</span>
+      <h2 class="t-ar">رسالةٌ مخصّصة لكلّ جهة</h2>
+      <h2 class="t-en">A tailored message for every audience</h2>
+      <p class="lead t-ar">تستجيب بَيَان لحاجة كلّ جمهورٍ على حدة: من المدرسة الخاصة إلى الوزارة، ومن المعلّم إلى الطالب.</p>
+      <p class="lead t-en">Bayan responds to each audience's needs in turn: from the private school to the ministry, and from the teacher to the student.</p>
+    </div>
+    <div class="sol-rows">
+      <article class="sol-row reveal">
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠١</span><span class="t-en">01</span></span><img loading="lazy" decoding="async" alt="طلابٌ أمام مبنى مدرسةٍ في يومٍ مشمس" style="object-position:center" src="assets/img-sol-schools.jpg"></div>
+        <div class="sol-content">
+          <span class="tag"><span class="t-ar">القطاع الخاص</span><span class="t-en">Private sector</span></span>
+          <h3 class="t-ar">للمدارس الخاصة</h3><h3 class="t-en">For Private Schools</h3>
+          <p class="need t-ar">تبحث المدرسة عن ما يميّزها ويرفع نتائج طلبتها معًا، وضعف القرائية من أكثر ما يقلق أولياء الأمور.</p>
+          <p class="need t-en">Private schools seek both distinction and stronger outcomes; weak literacy is among parents' greatest concerns.</p>
+          <p class="resp t-ar">منهجٌ قرائيٌّ متدرّج جاهز التطبيق يوفّر عناء التأليف والضبط، ويُدمَج مع منهجك القائم لا ليزاحمه؛ ومع لوحات المتابعة تتحوّل القرائية من هاجسٍ إلى ميزةٍ تسويقية ملموسة.</p>
+          <p class="resp t-en">A ready, graded literacy curriculum that spares authoring and levelling and integrates with your existing programme rather than competing with it; and with tracking dashboards, literacy turns from a worry into a tangible competitive advantage.</p>
+          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+        </div>
+      </article>
+      <article class="sol-row reveal">
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٢</span><span class="t-en">02</span></span><img loading="lazy" decoding="async" alt="مبنىً مؤسّسيٌّ حديث يمثّل جهةً حكومية" style="object-position:center" src="assets/img-sol-ministry.jpg"></div>
+        <div class="sol-content">
+          <span class="tag"><span class="t-ar">القطاع الحكومي</span><span class="t-en">Public sector</span></span>
+          <h3 class="t-ar">لوزارات التعليم</h3><h3 class="t-en">For Ministries of Education</h3>
+          <p class="need t-ar">يمثّل ضعف القرائية تحدّيًا على مستوى النظام بأكمله، يصعب علاجه بحلولٍ متفرّقة أو محتوًى غير متّسق.</p>
+          <p class="need t-en">Weak literacy is a system-wide challenge, hard to address with scattered solutions or inconsistent content.</p>
+          <p class="resp t-ar">حلٌّ منهجيٌّ قابل للتوسّع يُواءَم مع المراحل الوطنية، ويربط القرائية بالهوية والحضارة والمعرفة؛ ومع لوحاتٍ تجميعية ومعايير موحّدة يدعم سياسات تطوير العربية على نطاقٍ واسع.</p>
+          <p class="resp t-en">A scalable, methodical solution, alignable to national stages and anchoring literacy in identity, civilisation and knowledge; and with aggregate dashboards and unified standards, it supports Arabic-development policy at scale.</p>
+          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+        </div>
+      </article>
+      <article class="sol-row reveal">
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٣</span><span class="t-en">03</span></span><img loading="lazy" decoding="async" alt="معلّمةٌ ترشد طلابًا حول مكتب الدراسة" style="object-position:center" src="assets/img-sol-teachers.jpg"></div>
+        <div class="sol-content">
+          <span class="tag"><span class="t-ar">المعلّمون</span><span class="t-en">Educators</span></span>
+          <h3 class="t-ar">للمعلمين</h3><h3 class="t-en">For Teachers</h3>
+          <p class="need t-ar">يقضي معلّم العربية وقتًا طويلًا في الإعداد والضبط والتصحيح، فيتبقّى وقتٌ أقلّ لما يُجيده: التدريس.</p>
+          <p class="need t-en">Arabic teachers spend long hours preparing, levelling and grading, leaving less time for what they do best: teaching.</p>
+          <p class="resp t-ar">محتوًى جاهزٌ مبنيٌّ على أسسٍ علمية، وبناءٌ واضح للدرس، وتصحيحٌ تلقائيّ للاختبارات، وأدوات تكليفٍ ومتابعة؛ فتتفرّغ لتوجيه الفهم وإدارة النقاش وإلهام طلبتك.</p>
+          <p class="resp t-en">Ready, research-based content, a clear lesson structure, auto-graded tests, and organised assignment and tracking tools — so you can focus on guiding understanding, leading discussion and inspiring your students.</p>
+          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+        </div>
+      </article>
+      <article class="sol-row reveal">
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٤</span><span class="t-en">04</span></span><img loading="lazy" decoding="async" alt="طلابٌ يقرؤون في مكتبة" style="object-position:center" src="assets/img-sol-students.jpg"></div>
+        <div class="sol-content">
+          <span class="tag"><span class="t-ar">المتعلّمون</span><span class="t-en">Learners</span></span>
+          <h3 class="t-ar">للطلبة</h3><h3 class="t-en">For Students</h3>
+          <p class="need t-ar">يُحبَط الطالب من نصٍّ أعلى من مستواه، ويملّ من أدنى منه، وينفصل عن القراءة حين لا تمسّ عالمه.</p>
+          <p class="need t-en">Students grow frustrated with a text above their level, bored by one below it, and disengaged when reading does not touch their world.</p>
+          <p class="resp t-ar">رحلةٌ قرائيةٌ بمستواك تمامًا، ومحتوًى يربطك بهويّتك وحضارتك؛ واقترانُ كلّ موضوعٍ بشخصيةٍ مُلهمة يبني فيك عادة القراءة الفاهمة الناقدة التي تخدمك في كلّ موادك.</p>
+          <p class="resp t-en">A journey at exactly your level and content that ties you to your identity and civilisation; pairing every topic with an inspiring figure builds the habit of critical, comprehending reading that serves you across all your subjects.</p>
+          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT STATS BAND ============ -->
+<!-- NOTE: figures below are illustrative. Replace data-target values with real metrics before launch. -->
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="42,8 76,42 42,76 8,42"/><polygon points="18,18 66,18 66,66 18,66"/><circle cx="42" cy="42" r="6"/></svg>
+</div>
+<section class="sec impact" id="impact" aria-label="Impact in numbers">
+  <div class="geo-layer" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="s-head center reveal" style="margin-bottom:clamp(28px,4vw,44px)">
+      <span class="eyebrow t-ar">الأثر بالأرقام</span><span class="eyebrow t-en">Impact in numbers</span>
+      <h2 class="t-ar">قرائيةٌ تُقاس، لا تُدّعى</h2>
+      <h2 class="t-en">Literacy that is measured, not merely claimed</h2>
+    </div>
+    <div class="grid-stats">
+      <div class="stat reveal"><div class="sn" data-target="6"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">مستويات قرائية</div><div class="st t-en">Reading levels</div><div class="ss t-ar">من الروضة إلى الجامعة</div><div class="ss t-en">KG to university</div></div>
+      <div class="stat reveal"><div class="sn" data-target="10"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">أقسام لكل درس</div><div class="st t-en">Parts per lesson</div><div class="ss t-ar">من النصّ إلى التطبيق</div><div class="ss t-en">From text to practice</div></div>
+      <div class="stat reveal"><div class="sn" data-target="4"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">محاور معرفية</div><div class="st t-en">Knowledge axes</div><div class="ss t-ar">محلي · حضاري · موضوعي · إسلامي</div><div class="ss t-en">Local · Historical · Subject · Islamic</div></div>
+      <div class="stat reveal"><div class="sn" data-target="100" data-suffix="%"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">محتوى مراجَع علميًّا</div><div class="st t-en">Academically reviewed</div><div class="ss t-ar">قبل كل نشر</div><div class="ss t-en">Before every publication</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <span class="eyebrow t-ar">عن بَيَان</span><span class="eyebrow t-en">About</span>
+      <h2 class="t-ar">القراءة وسيلة، والقرائية غاية</h2>
+      <h2 class="t-en">Reading is the means, literacy the end</h2>
+    </div>
+    <figure class="about-band reveal"><img src="assets/about-calligraphy.jpg" alt="يدٌ تكتب خطًّا عربيًّا بالقلم والحبر" loading="lazy" decoding="async"></figure>
+    <div class="philo reveal">
+      <p class="q t-ar">وُلدت بَيَان من ملاحظةٍ بسيطة وعميقة: أنّ تعليم الطفل أن <em>يقرأ</em> شيءٌ، وأن نعلّمه أن <em>يفهم</em> شيءٌ آخر.</p>
+      <p class="q t-en">Bayan was born of a simple, deep observation: teaching a child to <em>read</em> is one thing; teaching them to <em>understand</em> is another.</p>
+      <p class="t-ar">القرائية هي البوابة الأولى لكلّ تعلّم، وضعفها يُعيق المتعلّم في كلّ المواد لا في اللغة وحدها. لذا تقوم بَيَان على مبدأٍ ناظم: القراءة وسيلة، والقرائية غاية — ولا قيمة لقراءةٍ لا يُبنى عليها فهمٌ ولا يَنتج عنها تفاعلٌ مع النص.</p>
+      <p class="t-en">Literacy is the first gateway to all learning, and its weakness hinders the learner in every subject, not language alone. So Bayan rests on one governing principle: reading is the means, literacy is the end — reading has no value if no understanding is built upon it and no engagement with the text results.</p>
+    </div>
+    <div class="princ">
+      <div class="card reveal">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/></svg></span>
+        <h3 class="t-ar">صون النصّ الأصيل</h3><h3 class="t-en">Preserving the authentic text</h3><p class="t-ar">خاصةً النصوص المقدّسة والتراثية، تُصان كما وردت دون أيّ تعديل.</p><p class="t-en">Sacred and classical texts in particular are preserved exactly as received, without any alteration.</p>
+      </div>
+      <div class="card reveal">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20h4V10H4v10zm6 0h4V4h-4v16zm6 0h4v-7h-4v7z"/></svg></span>
+        <h3 class="t-ar">التدرّج</h3><h3 class="t-en">Progression</h3><p class="t-ar">مراعاة نموّ المتعلّم المعرفي واللغوي مرحلةً بعد مرحلة، نصًّا ومفرداتٍ وأسلوبًا.</p><p class="t-en">Honouring the learner's cognitive and linguistic growth stage by stage — in text, vocabulary and style.</p>
+      </div>
+      <div class="card reveal">
+        <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8h10M7 12h6M5 4h14a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H9l-4 4V5a1 1 0 0 1 1-1z"/></svg></span>
+        <h3 class="t-ar">ربط القرائية بالمعنى والهوية</h3><h3 class="t-en">Linking literacy to meaning &amp; identity</h3><p class="t-ar">فلا تُقرأ الكلمة منفصلةً عن سياقها الثقافي والحضاري.</p><p class="t-en">A word is never read in isolation from its cultural and civilisational context.</p>
+      </div>
+    </div>
+    <div class="review reveal">
+      <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+      <div>
+        <h3 class="t-ar">الجهة المطوّرة والمراجعة العلمية</h3><h3 class="t-en">Developer &amp; academic review</h3>
+        <p class="t-ar">تطوّر المنصة <b>مجموعة المتحدة للتعليم</b> اعتمادًا على فريقٍ تربويٍّ ولغويّ. ويخضع كلُّ محتوًى — قبل نشره — لمراجعةٍ علمية متخصّصة تضمن دقّته التربوية واللغوية وملاءمته للمستوى، فلا يصل المتعلّم إلا ما اجتاز هذه المراجعة.</p>
+        <p class="t-en">The platform is developed by <b>Almotahida Education Group</b>, drawing on an educational and linguistic team. Every piece of content — before publication — undergoes specialised academic review ensuring its pedagogical and linguistic accuracy and level-appropriateness; only what passes this review reaches the learner.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<div class="ornament" aria-hidden="true">
+  <svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="42,8 76,42 42,76 8,42"/><polygon points="18,18 66,18 66,66 18,66"/><circle cx="42" cy="42" r="6"/></svg>
+</div>
+<section class="sec bg2" id="faq">
+  <div class="wrap">
+    <div class="s-head center reveal">
+      <span class="eyebrow t-ar">الأسئلة الشائعة</span><span class="eyebrow t-en">FAQ</span>
+      <h2 class="t-ar">أسئلةٌ نُسأل عنها كثيرًا</h2>
+      <h2 class="t-en">Questions we are often asked</h2>
+    </div>
+    <div class="faqwrap">
+      <details class="faq reveal"><summary><span class="t-ar">ما الفرق بين بَيَان ومنصات تعليم العربية الأخرى؟</span><span class="t-en">How is Bayan different from other Arabic-teaching platforms?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">تركّز بَيَان على القرائية لا على تعليم اللغة فحسب: هدفها بناء الفهم والتحليل والنقد، عبر محتوًى يربط القراءة بالهوية والحضارة والمعرفة في أربعة محاور، ومستوياتٍ ستّ متدرّجة بدقّة.</span><span class="t-en">Bayan focuses on literacy, not language teaching alone: its goal is to build comprehension, analysis and critique, through content linking reading to identity, civilisation and knowledge across four axes, and six precisely graded levels.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">لمن صُمّمت المنصة؟</span><span class="t-en">Who is the platform designed for?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">للمدارس الخاصة ووزارات التعليم والمعلمين والطلبة من رياض الأطفال إلى الجامعة، مع حساباتٍ ولوحاتٍ تناسب كلّ دور.</span><span class="t-en">For private schools, ministries of education, teachers and students from kindergarten to university, with accounts and dashboards suited to each role.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">كيف تُضمَن دقّة المحتوى علميًّا؟</span><span class="t-en">How is content accuracy ensured?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">يخضع كلُّ محتوًى لمراجعةٍ علمية متخصّصة قبل النشر، وتُصان النصوص المقدّسة والتراثية كما وردت دون تعديل.</span><span class="t-en">Every piece of content undergoes specialised academic review before publication, and sacred and classical texts are preserved as received, without alteration.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">هل يحلّ بَيَان محلّ منهج المدرسة؟</span><span class="t-en">Does Bayan replace the school's curriculum?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">لا؛ صُمّم ليتكامل مع المناهج القائمة ويواءمها، لا ليزاحمها، فيوظّفه المعلّم بمرونةٍ ضمن خطّته.</span><span class="t-en">No; it is designed to integrate with and align to existing curricula rather than compete with them, so teachers deploy it flexibly within their plan.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">بأيّ لغة المحتوى؟</span><span class="t-en">What language is the content in?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">المحتوى التعليمي بالعربية الفصحى المعيارية. أمّا واجهة الموقع التعريفي فثنائية اللغة عربي/إنجليزي.</span><span class="t-en">The educational content is in standard literary Arabic, while the marketing website's interface is bilingual, Arabic/English.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">كيف نبدأ؟</span><span class="t-en">How do we start?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">عبر طلب عرضٍ تعريفيّ من نموذج التواصل، فيتواصل الفريق لتحديد احتياج جهتك وتجهيز تجربةٍ مناسبة.</span><span class="t-en">By requesting a demo from the contact form; the team will then reach out to identify your organisation's needs and prepare a suitable experience.</span></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT CTA (DARK) ============ -->
+<section class="sec dark cta" id="contact">
+  <img src="assets/logo-light.png" class="wm" alt="">
+  <div class="geo-layer" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow t-ar">ابدأ الآن</span><span class="eyebrow t-en">Get started</span>
+      <h2 class="t-ar" style="margin-top:14px">ابدأ ببناء جيلٍ <em>يقرأ ليفهم</em></h2>
+      <h2 class="t-en" style="margin-top:14px">Start building a generation that <em>reads to understand</em></h2>
+      <p class="sub t-ar">اطلب عرضًا تعريفيًّا، وسيتواصل فريق بَيَان لتحديد احتياج جهتك وتجهيز تجربةٍ مناسبة لها.</p>
+      <p class="sub t-en">Request a demo, and the Bayan team will reach out to identify your organisation's needs and prepare a suitable experience.</p>
+      <!-- NOTE: replace email / phone / address / social links with the client's real details. -->
+      <div class="contact-info">
+        <div class="cinfo">
+          <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="ct"><b><span class="t-ar">البريد الإلكتروني</span><span class="t-en">Email</span></b><span><a href="mailto:info@almotahidaeducation.com">info@almotahidaeducation.com</a></span></span>
+        </div>
+        <div class="cinfo">
+          <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <span class="ct"><b><span class="t-ar">الهاتف</span><span class="t-en">Phone</span></b><span dir="ltr"><a href="tel:+201000000000">+20 100 000 0000</a></span></span>
+        </div>
+        <div class="cinfo">
+          <span class="ci" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <span class="ct"><b><span class="t-ar">العنوان</span><span class="t-en">Address</span></b><span><span class="t-ar">مجموعة المتحدة للتعليم</span><span class="t-en">Almotahida Education Group</span></span></span>
+        </div>
+        <div class="socials" aria-label="Social links">
+          <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
+          <a href="#" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="form reveal">
+      <form id="demoForm" novalidate>
+        <h3 class="t-ar">اطلب عرضًا تعريفيًّا</h3><h3 class="t-en">Request a demo</h3>
+        <p class="fp t-ar">املأ النموذج وسنعود إليك قريبًا.</p><p class="fp t-en">Fill in the form and we will get back to you soon.</p>
+        <div class="field"><label for="f-name"><span class="t-ar">الاسم</span><span class="t-en">Name</span></label><input class="input" id="f-name" name="name" type="text" placeholder="اسمك الكريم" data-ph-ar="اسمك الكريم" data-ph-en="Your name" autocomplete="name"></div>
+        <div class="field"><label for="f-org"><span class="t-ar">الجهة</span><span class="t-en">Organisation</span></label><input class="input" id="f-org" name="org" type="text" placeholder="اسم المدرسة أو الجهة" data-ph-ar="اسم المدرسة أو الجهة" data-ph-en="School or organisation" autocomplete="organization"></div>
+        <div class="field"><label for="f-type"><span class="t-ar">نوع الجهة</span><span class="t-en">Organisation type</span></label>
+          <select class="input" id="f-type" name="type">
+            <option value="" data-en="Select type…">اختر النوع…</option>
+            <option data-en="Private school">مدرسة خاصة</option>
+            <option data-en="Ministry / government">وزارة / جهة حكومية</option>
+            <option data-en="Teacher">معلّم</option>
+            <option data-en="Student / parent">طالب / وليّ أمر</option>
+            <option data-en="Other">أخرى</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-email"><span class="t-ar">البريد الإلكتروني</span><span class="t-en">Email</span></label><input class="input" id="f-email" name="email" type="email" placeholder="name@example.com" autocomplete="email"></div>
+        <button type="submit" class="btn btn-primary"><span class="t-ar">إرسال الطلب <span class="x">←</span></span><span class="t-en">Send request <span class="x">→</span></span></button>
+        <p class="note"><span class="t-ar">نموذج توضيحي — لا تُرسَل البيانات إلى أيّ خادم.</span><span class="t-en">Demo form — no data is sent to any server.</span></p>
+      </form>
+      <div class="thanks" id="thanks">
+        <span class="ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+        <h3 class="t-ar">شكرًا لك!</h3><h3 class="t-en">Thank you!</h3>
+        <p class="t-ar">تم استلام طلبك في هذا النموذج التجريبي. عند الربط الفعليّ سيصلك الفريق على بريدك.</p>
+        <p class="t-en">Your request has been received in this demo form. Once connected for real, the team will reach you by email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="fb">
+      <img src="assets/logo-light.png" alt="بَيَان — منصة القرائية العربية">
+      <p class="t-ar">منصة القرائية العربية — حين تصبح القراءةُ فهمًا. من تطوير مجموعة المتحدة للتعليم.</p>
+      <p class="t-en">The Arabic literacy platform — where reading becomes understanding. Developed by Almotahida Education Group.</p>
+    </div>
+    <div>
+      <h4 class="t-ar">روابط سريعة</h4><h4 class="t-en">Quick links</h4>
+      <ul>
+        <li><a href="#about"><span class="t-ar">عن بَيَان</span><span class="t-en">About</span></a></li>
+        <li><a href="#methodology"><span class="t-ar">المنهجية</span><span class="t-en">Methodology</span></a></li>
+        <li><a href="#content"><span class="t-ar">المحتوى والمحاور</span><span class="t-en">Content &amp; Axes</span></a></li>
+        <li><a href="#platform"><span class="t-ar">المنصة والمزايا</span><span class="t-en">Platform &amp; Features</span></a></li>
+        <li><a href="#literacy"><span class="t-ar">القراءة مقابل القرائية</span><span class="t-en">Reading vs Literacy</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="t-ar">للجهات</h4><h4 class="t-en">For organisations</h4>
+      <ul>
+        <li><a href="#solutions"><span class="t-ar">المدارس الخاصة</span><span class="t-en">Private schools</span></a></li>
+        <li><a href="#solutions"><span class="t-ar">وزارات التعليم</span><span class="t-en">Ministries of Education</span></a></li>
+        <li><a href="#solutions"><span class="t-ar">المعلمون</span><span class="t-en">Teachers</span></a></li>
+        <li><a href="#solutions"><span class="t-ar">الطلبة</span><span class="t-en">Students</span></a></li>
+        <li><a href="#faq"><span class="t-ar">الأسئلة الشائعة</span><span class="t-en">FAQ</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="t-ar">تواصل</h4><h4 class="t-en">Contact</h4>
+      <div class="contact-mini">
+        <a href="mailto:info@almotahidaeducation.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@almotahidaeducation.com</span></a>
+        <a href="tel:+201000000000" dir="ltr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>+20 100 000 0000</span></a>
+        <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="t-ar">اطلب عرضًا تعريفيًّا</span><span class="t-en">Request a demo</span></a>
+      </div>
+      <div class="fsocials" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
+        <a href="#" aria-label="X (Twitter)" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
+        <a href="#" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <p><span class="t-ar">© ٢٠٢٦ مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span class="t-en">© 2026 Almotahida Education Group — All rights reserved.</span></p>
+    <div class="links"><a href="#"><span class="t-ar">سياسة الخصوصية</span><span class="t-en">Privacy Policy</span></a><a href="#"><span class="t-ar">الشروط</span><span class="t-en">Terms</span></a><a href="#about"><span class="t-ar">اعتماد المراجعة العلمية</span><span class="t-en">Academic-review accreditation</span></a></div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+const root=document.documentElement;
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// header solidify + scroll progress bar
+const hdr=document.getElementById('hdr');
+const bar=document.getElementById('progress');
+function onScroll(){
+  hdr.classList.toggle('scrolled',window.scrollY>12);
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  const p=max>0?h.scrollTop/max:0;
+  if(bar)bar.style.transform='scaleX('+p+')';
+  if(toTop)toTop.classList.toggle('show',window.scrollY>600);
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+
+// mobile menu
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+
+// back-to-top
+const toTop=document.getElementById('toTop');
+if(toTop)toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
+onScroll();
+
+// gentle hero parallax — refined, and disabled when reduced-motion is requested
+if(!reduceMotion){
+  const hArt=document.querySelector('.hero-art'),hGeo=document.querySelector('.hero .geo-layer');
+  let tick=false;
+  window.addEventListener('scroll',()=>{
+    if(tick)return;tick=true;
+    requestAnimationFrame(()=>{
+      const y=window.scrollY;
+      if(y<1000){
+        if(hArt)hArt.style.transform='translateY('+(y*0.05).toFixed(1)+'px)';
+        if(hGeo)hGeo.style.transform='translateY('+(y*-0.035).toFixed(1)+'px)';
+      }
+      tick=false;
+    });
+  },{passive:true});
+}
+
+// scroll reveal (fallback: reveal all if IO unsupported)
+const revs=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  revs.forEach(el=>io.observe(el));
+}else{revs.forEach(el=>el.classList.add('in'));}
+
+// active-section nav highlight
+const navLinks=[...menu.querySelectorAll('a')];
+const secById=id=>document.getElementById(id);
+const watched=navLinks.map(a=>secById(a.getAttribute('href').slice(1))).filter(Boolean);
+if('IntersectionObserver' in window&&watched.length){
+  const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+  }});},{rootMargin:'-45% 0px -50% 0px'});
+  watched.forEach(s=>spy.observe(s));
+}
+
+// ===== animated counters =====
+function toArabic(s){return String(s).replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);}
+function runCounter(el){
+  const target=+el.dataset.target||0, suffix=el.dataset.suffix||'';
+  const dur=reduceMotion?0:1100, t0=performance.now();
+  function frame(t){
+    const k=dur?Math.min((t-t0)/dur,1):1;
+    const val=Math.round((1-Math.pow(1-k,3))*target);
+    const num=(root.lang==='ar')?toArabic(val):val;
+    el.innerHTML=num+(suffix?'<span class="suf">'+suffix+'</span>':'');
+    if(k<1)requestAnimationFrame(frame);
+    else el.dataset.done='1';
+  }
+  requestAnimationFrame(frame);
+}
+const counters=document.querySelectorAll('.sn[data-target]');
+if('IntersectionObserver' in window){
+  const cio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.done){runCounter(e.target);cio.unobserve(e.target);}}),{threshold:.4});
+  counters.forEach(c=>cio.observe(c));
+}else{counters.forEach(runCounter);}
+
+// axes explorer (tabs)
+const axex=document.getElementById('axex');
+if(axex){
+  const tabs=[...axex.querySelectorAll('.axex-tab')];
+  const panels=[...axex.querySelectorAll('.axex-panel')];
+  tabs.forEach((t,i)=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>{x.classList.remove('is-active');x.setAttribute('aria-selected','false');});
+    panels.forEach(p=>{p.hidden=true;p.classList.remove('is-active');});
+    t.classList.add('is-active');t.setAttribute('aria-selected','true');
+    const p=panels[i]; if(p){p.hidden=false; void p.offsetWidth; p.classList.add('is-active');}
+  }));
+}
+
+// demo form (no network)
+const form=document.getElementById('demoForm'),thanks=document.getElementById('thanks');
+form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';thanks.style.display='block';thanks.setAttribute('tabindex','-1');thanks.focus();});
+
+// ===== language toggle (persisted + browser-aware) =====
+const META={
+  ar:{title:'بَيَان — منصة القرائية العربية',desc:'بَيَان منصة القرائية العربية: رحلة قرائية متدرّجة عبر ستة مستويات، من رياض الأطفال إلى الجامعة، تبني القارئ المفكّر لا الناطق فحسب.'},
+  en:{title:'Bayan — Arabic Literacy Platform',desc:'Bayan is an Arabic-literacy platform: a graded journey across six levels, from kindergarten to university, building readers who think rather than merely decode.'}
+};
+function setLang(l,save){
+  root.lang=l;
+  root.dir=(l==='ar')?'rtl':'ltr';
+  document.title=META[l].title;
+  const m=document.querySelector('meta[name="description"]');
+  if(m)m.setAttribute('content',META[l].desc);
+  document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=(l==='ar')?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en');});
+  document.querySelectorAll('option[data-en]').forEach(o=>{if(!o.dataset.ar)o.dataset.ar=o.textContent;o.textContent=(l==='ar')?o.dataset.ar:o.getAttribute('data-en');});
+  const lb=document.getElementById('langBtn');
+  if(lb)lb.setAttribute('aria-label',(l==='ar')?'Switch to English':'التبديل إلى العربية');
+  // re-render any finished counters in the active locale
+  document.querySelectorAll('.sn[data-done]').forEach(el=>{
+    const t=+el.dataset.target||0, suf=el.dataset.suffix||'';
+    el.innerHTML=((l==='ar')?toArabic(t):t)+(suf?'<span class="suf">'+suf+'</span>':'');
+  });
+  try{if(save)localStorage.setItem('bayan-lang',l);}catch(e){}
+}
+document.getElementById('langBtn').addEventListener('click',()=>setLang(root.lang==='en'?'ar':'en',true));
+// initial language: Arabic is the primary/default; only honour an explicit prior choice
+let initLang='ar';
+try{
+  const saved=localStorage.getItem('bayan-lang');
+  if(saved==='en')initLang='en'; // visitor previously switched to English
+}catch(e){}
+setLang(initLang,false);
+</script>
+</body>
+</html>
