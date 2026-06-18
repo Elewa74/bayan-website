@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elewa74.github.io/bayan-website/sitemap.xml

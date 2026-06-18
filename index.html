@@ -8,8 +8,9 @@
 <meta name="keywords" content="القرائية, القراءة, العربية, منصة تعليمية, بيان, Arabic literacy, reading, education platform, Bayan, Almotahida Education">
 <meta name="author" content="Almotahida Education Group · مجموعة المتحدة للتعليم">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#EC2127">
-<link rel="canonical" href="https://bayan.almotahidaeducation.com/">
+<meta name="theme-color" content="#EC2127" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0B0A" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://elewa74.github.io/bayan-website/">
 
 <!-- Favicon (uses brand logo) -->
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -21,7 +22,7 @@
 <meta property="og:title" content="بَيَان — منصة القرائية العربية | حين تصبح القراءةُ فهمًا">
 <meta property="og:description" content="رحلةٌ قرائية متدرّجة عبر ستة مستويات، من رياض الأطفال إلى الجامعة، تبني القارئ المفكّر — بمحتوًى يصل المتعلّم بهويّته وحضارته.">
 <meta property="og:image" content="assets/hero.jpg">
-<meta property="og:url" content="https://bayan.almotahidaeducation.com/">
+<meta property="og:url" content="https://elewa74.github.io/bayan-website/">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:locale:alternate" content="en_US">
 
@@ -33,13 +34,13 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&family=Inter:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FAF8F4; --paper-2:#F4EFE7; --paper-3:#ECE4D8; --card:#FFFFFF;
-  --ink:#17120F; --ink-soft:#2C2521; --body:#4B443E; --muted:#8C8177;
+  --ink:#17120F; --ink-soft:#2C2521; --body:#4B443E; --muted:#6E635A;
   --red:#EC2127; --red-deep:#C2090F; --red-tint:#FBE6E6;
-  --black:#0E0B0A; --black-2:#181311; --on-dark:#F3ECE2; --on-dark-mut:#A89C90;
+  --black:#0E0B0A; --black-2:#181311; --on-dark:#F3ECE2; --on-dark-mut:#C7BCB0;
   --line:#E7E0D5; --line-2:#DCD4C7; --line-dark:#2B2421;
   --shadow:0 26px 64px -36px rgba(20,16,14,.40); --shadow-sm:0 12px 30px -20px rgba(20,16,14,.30);
   --radius:18px; --radius-sm:11px; --maxw:1240px;
@@ -53,6 +54,7 @@ p{margin:0}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 ::selection{background:var(--red);color:#fff}
+main:focus{outline:none}
 .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,4.5vw,40px)}
 .sec{padding-block:clamp(74px,11vh,128px)}
 .bg2{background:var(--paper-2)} .bg3{background:var(--paper-3)}
@@ -168,10 +170,16 @@ header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line)
 .litdefs .d.is-lit{border-color:rgba(236,33,39,.5);background:rgba(236,33,39,.08)}
 .litdefs .d.is-lit .k{color:#fff}
 .litdefs .d p{color:var(--on-dark);margin-top:12px;font-size:1.02rem}
-.pull{position:relative;border-top:1px solid var(--line-dark);padding-top:34px;margin-top:12px}
-.pull .q{font-family:'Aref Ruqaa',serif;font-weight:700;font-size:clamp(1.7rem,3.6vw,2.7rem);color:#fff;line-height:1.7;max-width:900px}
+.pull{position:relative;border-top:1px solid var(--line-dark);padding-top:54px;margin-top:34px;text-align:center}
+.pull::before{content:"\201D";position:absolute;top:8px;inset-inline-start:50%;transform:translateX(-50%);
+  font-family:'Cairo',serif;font-size:5rem;line-height:1;color:var(--red);opacity:.55}
+html[lang="en"] .pull::before{content:"\201C"}
+.pull .q{font-family:'Cairo','Tajawal',serif;font-weight:800;font-size:clamp(1.75rem,3.8vw,2.85rem);color:#fff;
+  line-height:1.7;max-width:980px;margin-inline:auto}
 .pull .q b{color:var(--red)}
-.pull .en{font-family:'Inter';color:var(--on-dark-mut);font-size:.98rem;margin-top:16px;max-width:680px}
+.pull .q .brandword{display:inline-flex;align-items:center;vertical-align:middle;margin-inline:.18em}
+.pull .q .brandword img{height:2.1em;width:auto;display:inline-block;transform:translateY(-.02em)}
+.pull .en{font-family:'Inter';color:var(--on-dark-mut);font-size:.98rem;margin-top:18px;max-width:680px;margin-inline:auto}
 
 /* ---------- Tables ---------- */
 .tbl-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow-sm)}
@@ -714,27 +722,27 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://bayan.almotahidaeducation.com/#org",
+      "@id": "https://elewa74.github.io/bayan-website/#org",
       "name": "Almotahida Education Group",
       "alternateName": "مجموعة المتحدة للتعليم",
-      "url": "https://bayan.almotahidaeducation.com/",
-      "logo": "https://bayan.almotahidaeducation.com/assets/logo-dark.png",
+      "url": "https://elewa74.github.io/bayan-website/",
+      "logo": "https://elewa74.github.io/bayan-website/assets/logo-dark.png",
       "email": "info@almotahidaeducation.com",
       "description": "Developer of Bayan, an Arabic-literacy platform."
     },
     {
       "@type": "WebSite",
-      "@id": "https://bayan.almotahidaeducation.com/#website",
-      "url": "https://bayan.almotahidaeducation.com/",
+      "@id": "https://elewa74.github.io/bayan-website/#website",
+      "url": "https://elewa74.github.io/bayan-website/",
       "name": "بَيَان · Bayan",
       "inLanguage": ["ar", "en"],
-      "publisher": { "@id": "https://bayan.almotahidaeducation.com/#org" }
+      "publisher": { "@id": "https://elewa74.github.io/bayan-website/#org" }
     },
     {
       "@type": "Product",
       "name": "Bayan — Arabic Literacy Platform",
       "alternateName": "بَيَان — منصة القرائية العربية",
-      "brand": { "@id": "https://bayan.almotahidaeducation.com/#org" },
+      "brand": { "@id": "https://elewa74.github.io/bayan-website/#org" },
       "description": "An Arabic-literacy platform: a graded journey across six levels, from kindergarten to university, building readers who think rather than merely decode.",
       "category": "EducationalApplication",
       "audience": {
@@ -758,7 +766,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
 
 <body>
 
-<a class="skip-link" href="#problem"><span class="t-ar">تخطَّ إلى المحتوى</span><span class="t-en">Skip to content</span></a>
+<a class="skip-link" href="#main"><span class="t-ar">تخطَّ إلى المحتوى</span><span class="t-en">Skip to content</span></a>
 <div id="progress" aria-hidden="true"></div>
 
 <!-- ============ HEADER ============ -->
@@ -783,6 +791,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
   </div>
 </header>
 
+<main id="main" tabindex="-1">
+
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="geo-layer" aria-hidden="true"></div>
@@ -804,7 +814,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       </div>
     </div>
     <div class="hero-art reveal has-photo">
-      <figure class="hero-photo"><img src="assets/hero.jpg" alt="طفلِ منهمكِ في قراءة كتاب" loading="eager" decoding="async"></figure>
+      <figure class="hero-photo"><img src="assets/hero.jpg" alt="طفلٌ منهمكٌ في قراءة كتاب" loading="eager" decoding="async"></figure>
       <div class="tagchip"><i>◆</i> <span class="t-ar">القراءة وسيلة · القرائية غاية</span><span class="t-en">Reading is the means · literacy the end</span></div>
     </div>
   </div>
@@ -877,8 +887,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       </table>
     </div>
     <div class="pull reveal">
-      <p class="q t-ar">القراءة شرطٌ لازم، والقرائية هي <b>الثمرة</b>. بَيَان لا تُعلّم الطفل أن يقرأ فحسب، بل أن يفهم ويحاور ويبني.</p>
-      <p class="q t-en">Reading is necessary; literacy is the <b>fruit</b>. Bayan teaches a child not only to read, but to understand, question and build.</p>
+      <p class="q t-ar">القراءة شرطٌ لازم، والقرائية هي <b>الثمرة</b>. <span class="brandword"><img src="assets/logo-mark-light.png" alt="بَيَان"></span> لا تُعلّم الطفل أن يقرأ فحسب، بل أن يفهم ويحاور ويبني.</p>
+      <p class="q t-en">Reading is necessary; literacy is the <b>fruit</b>. <span class="brandword"><img src="assets/logo-mark-light.png" alt="Bayan"></span> teaches a child not only to read, but to understand, question and build.</p>
     </div>
   </div>
 </section>
@@ -1299,10 +1309,10 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           <span class="ct"><b><span class="t-ar">العنوان</span><span class="t-en">Address</span></b><span><span class="t-ar">مجموعة المتحدة للتعليم</span><span class="t-en">Almotahida Education Group</span></span></span>
         </div>
         <div class="socials" aria-label="Social links">
-          <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
-          <a href="#" aria-label="X (Twitter)" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
-          <a href="#" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
-          <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
+          <a href="#" aria-label="X (Twitter)" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
+          <a href="#" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+          <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
     </div>
@@ -1335,6 +1345,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -1372,16 +1384,16 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         <a href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="t-ar">اطلب عرضًا تعريفيًّا</span><span class="t-en">Request a demo</span></a>
       </div>
       <div class="fsocials" aria-label="Social links">
-        <a href="#" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
-        <a href="#" aria-label="X (Twitter)" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
-        <a href="#" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
-        <a href="#" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM0 8h5v16H0zM8 8h4.8v2.2h.07c.67-1.2 2.3-2.5 4.73-2.5C22.4 7.7 24 10 24 14.1V24h-5v-8.8c0-2.1 0-4.8-2.9-4.8s-3.4 2.3-3.4 4.6V24H8z"/></svg></a>
+        <a href="#" aria-label="X (Twitter)" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.9-6.4L5.3 22H2.5l7-8.1L2 2h6.3l4.4 5.9zm-1.1 18h1.5L7 3.6H5.4z"/></svg></a>
+        <a href="#" aria-label="YouTube" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 0 0-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 0 0 1 7.5 31 31 0 0 0 .6 12 31 31 0 0 0 1 16.5a3 3 0 0 0 2.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23.4 12 31 31 0 0 0 23 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+        <a href="#" aria-label="Instagram" rel="noopener noreferrer" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
       </div>
     </div>
   </div>
   <div class="wrap foot-bottom">
     <p><span class="t-ar">© ٢٠٢٦ مجموعة المتحدة للتعليم — جميع الحقوق محفوظة.</span><span class="t-en">© 2026 Almotahida Education Group — All rights reserved.</span></p>
-    <div class="links"><a href="#"><span class="t-ar">سياسة الخصوصية</span><span class="t-en">Privacy Policy</span></a><a href="#"><span class="t-ar">الشروط</span><span class="t-en">Terms</span></a><a href="#about"><span class="t-ar">اعتماد المراجعة العلمية</span><span class="t-en">Academic-review accreditation</span></a></div>
+    <div class="links"><a href="privacy.html"><span class="t-ar">سياسة الخصوصية</span><span class="t-en">Privacy Policy</span></a><a href="terms.html"><span class="t-ar">الشروط</span><span class="t-en">Terms</span></a><a href="#about"><span class="t-ar">اعتماد المراجعة العلمية</span><span class="t-en">Academic-review accreditation</span></a></div>
   </div>
 </footer>
 
@@ -1396,8 +1408,9 @@ const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches
 // header solidify + scroll progress bar
 const hdr=document.getElementById('hdr');
 const bar=document.getElementById('progress');
+const toTop=document.getElementById('toTop');
 function onScroll(){
-  hdr.classList.toggle('scrolled',window.scrollY>12);
+  if(hdr)hdr.classList.toggle('scrolled',window.scrollY>12);
   const h=document.documentElement;
   const max=h.scrollHeight-h.clientHeight;
   const p=max>0?h.scrollTop/max:0;
@@ -1408,11 +1421,12 @@ window.addEventListener('scroll',onScroll,{passive:true});
 
 // mobile menu
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
-menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+if(burger&&menu){
+  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+}
 
 // back-to-top
-const toTop=document.getElementById('toTop');
 if(toTop)toTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'auto':'smooth'}));
 onScroll();
 
@@ -1441,7 +1455,7 @@ if('IntersectionObserver' in window){
 }else{revs.forEach(el=>el.classList.add('in'));}
 
 // active-section nav highlight
-const navLinks=[...menu.querySelectorAll('a')];
+const navLinks=menu?[...menu.querySelectorAll('a')]:[];
 const secById=id=>document.getElementById(id);
 const watched=navLinks.map(a=>secById(a.getAttribute('href').slice(1))).filter(Boolean);
 if('IntersectionObserver' in window&&watched.length){
@@ -1487,7 +1501,9 @@ if(axex){
 
 // demo form (no network)
 const form=document.getElementById('demoForm'),thanks=document.getElementById('thanks');
-form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';thanks.style.display='block';thanks.setAttribute('tabindex','-1');thanks.focus();});
+if(form&&thanks){
+  form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';thanks.style.display='block';thanks.setAttribute('tabindex','-1');thanks.focus();});
+}
 
 // ===== language toggle (persisted + browser-aware) =====
 const META={
@@ -1503,7 +1519,10 @@ function setLang(l,save){
   document.querySelectorAll('[data-ph-ar]').forEach(el=>{el.placeholder=(l==='ar')?el.getAttribute('data-ph-ar'):el.getAttribute('data-ph-en');});
   document.querySelectorAll('option[data-en]').forEach(o=>{if(!o.dataset.ar)o.dataset.ar=o.textContent;o.textContent=(l==='ar')?o.dataset.ar:o.getAttribute('data-en');});
   const lb=document.getElementById('langBtn');
-  if(lb)lb.setAttribute('aria-label',(l==='ar')?'Switch to English':'التبديل إلى العربية');
+  if(lb){
+    lb.setAttribute('aria-label',(l==='ar')?'Switch to English':'التبديل إلى العربية');
+    lb.setAttribute('aria-pressed',(l==='en')?'true':'false');
+  }
   // re-render any finished counters in the active locale
   document.querySelectorAll('.sn[data-done]').forEach(el=>{
     const t=+el.dataset.target||0, suf=el.dataset.suffix||'';
@@ -1511,7 +1530,8 @@ function setLang(l,save){
   });
   try{if(save)localStorage.setItem('bayan-lang',l);}catch(e){}
 }
-document.getElementById('langBtn').addEventListener('click',()=>setLang(root.lang==='en'?'ar':'en',true));
+const langBtn=document.getElementById('langBtn');
+if(langBtn)langBtn.addEventListener('click',()=>setLang(root.lang==='en'?'ar':'en',true));
 // initial language: Arabic is the primary/default; only honour an explicit prior choice
 let initLang='ar';
 try{
