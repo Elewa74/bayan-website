@@ -49,7 +49,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:'Tajawal',system-ui,'Segoe UI',sans-serif;background:var(--paper);color:var(--body);
   font-size:17px;line-height:1.85;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Cairo',sans-serif;color:var(--ink);line-height:1.28;font-weight:800;margin:0;letter-spacing:-.01em}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif;color:var(--ink);line-height:1.38;font-weight:800;margin:0;letter-spacing:-.01em}
 p{margin:0}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
@@ -86,8 +86,12 @@ main:focus{outline:none}
 
 /* ---------- Header ---------- */
 header{position:sticky;top:0;z-index:100;background:rgba(250,248,244,.82);backdrop-filter:blur(14px);
-  border-bottom:1px solid transparent;transition:.3s}
+  border-bottom:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s}
 header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line);box-shadow:0 8px 30px -24px rgba(20,16,14,.4)}
+header.on-dark{background:rgba(14,11,10,.78);border-bottom-color:rgba(255,255,255,.06)}
+header.on-dark .menu a,header.on-dark .lang{color:var(--on-dark)}
+header.on-dark .menu a.active{color:#fff}
+header.on-dark.scrolled{background:rgba(14,11,10,.92)}
 .nav{display:flex;align-items:center;gap:22px;height:76px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand img{height:42px;width:auto;display:block}
@@ -95,6 +99,7 @@ header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line)
 .brand .bn b{font-family:'Cairo';font-weight:800;font-size:1.32rem;color:var(--ink)}
 .brand .bn span{font-family:'Inter';font-size:.6rem;letter-spacing:.34em;color:var(--muted);margin-top:3px}
 .menu{display:flex;align-items:center;gap:4px;margin-inline-start:auto}
+.menu .menu-cta{display:none}
 .menu a{font-family:'Cairo';font-weight:600;font-size:.97rem;color:var(--ink-soft);padding:9px 14px;border-radius:8px;transition:.2s}
 .menu a:hover{color:var(--red);background:rgba(236,33,39,.06)}
 .nav-cta{display:flex;align-items:center;gap:12px}
@@ -110,7 +115,7 @@ header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line)
   linear-gradient(170deg,#FCFAF6,#EFE7DC)}
 .hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(36px,5vw,72px);align-items:center;
   padding-block:clamp(64px,11vh,118px)}
-.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:900;line-height:1.08;margin-top:20px}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem);font-weight:900;line-height:1.18;margin-top:20px}
 .hero h1 .em{color:var(--red);position:relative}
 .hero p.sub{color:var(--ink-soft);font-size:clamp(1.06rem,1.6vw,1.22rem);line-height:1.8;margin:24px 0 34px;max-width:540px}
 .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
@@ -132,7 +137,7 @@ header.scrolled{background:rgba(250,248,244,.95);border-bottom-color:var(--line)
 .trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-dark);
   border-radius:0;padding:0}
 .trust .cell{background:var(--black);padding:30px clamp(18px,2.5vw,30px);text-align:center}
-.trust .cell .n{font-family:'Cairo';font-weight:900;font-size:2.1rem;color:var(--red);line-height:1}
+.trust .cell .n{font-family:'Cairo';font-weight:900;font-size:clamp(2.4rem,3.6vw,3.2rem);color:var(--red);line-height:1}
 .trust .cell .t{font-family:'Cairo';font-weight:600;font-size:.98rem;color:var(--on-dark);margin-top:8px}
 .trust .cell .s{font-family:'Inter';font-size:.74rem;letter-spacing:.04em;color:var(--on-dark-mut);margin-top:4px}
 
@@ -373,6 +378,9 @@ footer{background:var(--black);color:var(--on-dark-mut)}
   .menu.open{display:flex;position:absolute;inset-inline:0;top:76px;flex-direction:column;background:var(--paper);
     border-bottom:1px solid var(--line);padding:14px 20px;gap:4px;box-shadow:var(--shadow)}
   .menu.open a{padding:13px 10px;border-radius:9px}
+  .menu.open .menu-cta{display:block;background:var(--red);color:#fff;text-align:center;
+    font-family:'Cairo',sans-serif;font-weight:800;margin-top:8px;padding:14px 12px}
+  .menu.open .menu-cta:hover{background:var(--red-deep)}
   .hero .wrap{grid-template-columns:1fr;text-align:center}
   .hero .cta-row,.hero .micro{justify-content:center}
   .hero-art{order:-1;min-height:300px}
@@ -646,7 +654,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
 .sol-row:hover{box-shadow:var(--shadow);border-color:var(--red)}
 .sol-row:nth-child(even){flex-direction:row-reverse}
 .sol-media{flex:0 0 42%;position:relative;min-height:300px;overflow:hidden}
-.sol-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.sol-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 35%;transition:transform .55s ease}
 .sol-row:hover .sol-media img{transform:scale(1.05)}
 .sol-num{position:absolute;top:16px;inset-inline-start:16px;z-index:1;width:42px;height:42px;border-radius:12px;
   display:grid;place-items:center;background:rgba(236,33,39,.95);color:#fff;font-family:'Cairo',sans-serif;font-weight:900;font-size:1.15rem}
@@ -781,6 +789,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <a href="#platform"><span class="t-ar">المنصة</span><span class="t-en">Platform</span></a>
       <a href="#solutions"><span class="t-ar">الحلول</span><span class="t-en">Solutions</span></a>
       <a href="#faq"><span class="t-ar">الأسئلة</span><span class="t-en">FAQ</span></a>
+      <a href="#contact" class="menu-cta"><span class="t-ar">اطلب عرضًا</span><span class="t-en">Request a demo</span></a>
     </nav>
     <div class="nav-cta">
       <button id="langBtn" class="lang" type="button" aria-label="Switch language"><span class="t-ar">EN</span><span class="t-en">ع</span></button>
@@ -809,7 +818,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <div class="micro">
         <span class="t-ar"><b>٦</b> مستويات قرائية</span><span class="t-en"><b>6</b> reading levels</span>
         <span class="t-ar"><b>٤</b> محاور معرفية</span><span class="t-en"><b>4</b> knowledge axes</span>
-        <span class="t-ar"><b>١٠</b> أقسام للدرس</span><span class="t-en"><b>10</b> lesson parts</span>
+        <span class="t-ar"><b>١٠</b> أقسامٍ في الدرس</span><span class="t-en"><b>10</b> lesson parts</span>
       </div>
     </div>
     <div class="hero-art reveal has-photo">
@@ -824,7 +833,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
   <div class="wrap">
     <div class="cell"><div class="n"><span class="t-ar">٦</span><span class="t-en">6</span></div><div class="t t-ar">مستويات قرائية متدرّجة</div><div class="t t-en">Six graded levels</div></div>
     <div class="cell"><div class="n"><span class="t-ar">٤</span><span class="t-en">4</span></div><div class="t t-ar">محاور معرفية متكاملة</div><div class="t t-en">Four knowledge axes</div></div>
-    <div class="cell"><div class="n"><span class="t-ar">٢</span><span class="t-en">2</span></div><div class="t t-ar">مساران: مؤلَّف وأصيل</div><div class="t t-en">Authored &amp; authentic</div></div>
+    <div class="cell"><div class="n"><span class="t-ar">٢</span><span class="t-en">2</span></div><div class="t t-ar">مساران: توليديّ وأصيل</div><div class="t t-en">Two tracks: Generative &amp; Authentic</div></div>
     <div class="cell"><div class="n">✓</div><div class="t t-ar">عربية فصحى مراجَعة علميًّا</div><div class="t t-en">Academically reviewed</div></div>
   </div>
 </section>
@@ -838,8 +847,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <p class="big t-en" style="margin-top:16px">Many learners can decode and pronounce words, yet cannot <em>understand</em>, analyse or use what they read.</p>
     </div>
     <div class="reveal">
-      <p class="t-ar">هذه الفجوة — بين القراءة الآلية والفهم الحقيقي — لا تُضعف اللغة وحدها، بل تمتدّ إلى كلّ مادةٍ تُدرَّس بالعربية؛ إذ يقف ضعف القرائية حائلًا بين المتعلّم وبين العلوم والرياضيات والدراسات الاجتماعية على حدٍّ سواء.</p>
-      <p class="t-en">This gap — between mechanical reading and genuine comprehension — weakens not only language but every subject taught in Arabic; weak literacy stands between the learner and science, mathematics and social studies alike.</p>
+      <p class="t-ar">هذه الفجوة — بين القراءة الآلية والفهم الحقيقي — لا تُضعف اللغة وحدها، بل تمتدّ إلى كلّ مادةٍ تُدرَّس بالعربية؛ إذ يقف ضعف القرائية حائلًا بين المتعلّم وبين العلوم والرياضيات والدراسات الاجتماعية جميعًا.</p>
+      <p class="t-en">This gap — between mechanical reading and genuine comprehension — weakens not only language but every subject taught in Arabic; weak literacy stands between the learner and science, mathematics and the social studies.</p>
       <p class="t-ar">ويضاعف من حدّتها ندرةُ المحتوى العربيّ المتدرّج المبنيّ على أسسٍ علمية: فالمعلّم يؤلّف مادته بنفسه أو يستعير نصوصًا غير مضبوطة المستوى، والمدرسة تفتقر إلى منهجٍ قرائيٍّ متّسق عبر المراحل.</p>
       <p class="t-en">It is widened by a scarcity of graded, research-based Arabic content: teachers often author their own material or borrow texts of uneven level, and schools lack a coherent literacy curriculum across stages.</p>
       <a href="#literacy" class="lnk"><span class="t-ar">ما الفرق بين القراءة والقرائية؟ <span class="x">←</span></span><span class="t-en">What is the difference between reading and literacy? <span class="x">→</span></span></a>
@@ -877,9 +886,9 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           <th class="hi"><span class="t-ar">القرائية</span><span class="t-en">Literacy</span></th>
         </tr></thead>
         <tbody>
-          <tr><td class="hd"><span class="t-ar">الطبيعة</span><span class="t-en">Nature</span></td><td><span class="t-ar">مهارة آلية</span><span class="t-en">A mechanical skill</span></td><td><span class="t-ar">كفاية معرفية وعقلية</span><span class="t-en">A cognitive competence</span></td></tr>
-          <tr><td class="hd"><span class="t-ar">الهدف</span><span class="t-en">Goal</span></td><td><span class="t-ar">نطق الكلمات سليمةً</span><span class="t-en">Pronouncing words correctly</span></td><td><span class="t-ar">فهم النصّ وتحليله ونقده</span><span class="t-en">Understanding, analysing &amp; critiquing</span></td></tr>
-          <tr><td class="hd"><span class="t-ar">المخرَج</span><span class="t-en">Output</span></td><td><span class="t-ar">قارئٌ ناطق</span><span class="t-en">A reader who pronounces</span></td><td><span class="t-ar">قارئٌ مفكّرٌ ومنتِج</span><span class="t-en">A thinking, producing reader</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">الطبيعة</span><span class="t-en">Nature</span></td><td><span class="t-ar">مهارة آلية</span><span class="t-en">A mechanical skill</span></td><td><span class="t-ar">كفاءةٌ معرفية وعقلية</span><span class="t-en">A cognitive & mental competence</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">الهدف</span><span class="t-en">Goal</span></td><td><span class="t-ar">نطق الكلمات سليمةً</span><span class="t-en">Pronouncing words correctly</span></td><td><span class="t-ar">فهم النصّ وتحليله ونقده</span><span class="t-en">Comprehension, analysis &amp; critique</span></td></tr>
+          <tr><td class="hd"><span class="t-ar">المخرَج</span><span class="t-en">Output</span></td><td><span class="t-ar">قارئٌ ناطق</span><span class="t-en">A reader who only decodes</span></td><td><span class="t-ar">قارئٌ مفكّرٌ ومنتِج</span><span class="t-en">A reader who thinks and creates</span></td></tr>
           <tr><td class="hd"><span class="t-ar">بالمعنى</span><span class="t-en">Meaning</span></td><td><span class="t-ar">قد تنفصل عن المعنى</span><span class="t-en">May be detached from meaning</span></td><td><span class="t-ar">تقوم على المعنى والسياق</span><span class="t-en">Built on meaning &amp; context</span></td></tr>
           <tr><td class="hd"><span class="t-ar">في بَيَان</span><span class="t-en">In Bayan</span></td><td><span class="t-ar">نقطة الانطلاق</span><span class="t-en">The starting point</span></td><td><span class="t-ar">الغاية المقصودة</span><span class="t-en">The intended goal</span></td></tr>
         </tbody>
@@ -904,7 +913,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
     </div>
     <div class="steps">
       <div class="step reveal"><div class="num"><span class="t-ar">١</span><span class="t-en">1</span></div><h3 class="t-ar">اختر المسار والموضوع</h3><h3 class="t-en">Choose the track and topic</h3><p class="t-ar">تختار المحور والموضوع والشخصية المرتبطة به، فيُبنى الدرس حول اهتمام المتعلّم وهويّته.</p><p class="t-en">You pick the axis, topic and a related figure, and the lesson is built around the learner's interest and identity.</p></div>
-      <div class="step reveal"><div class="num"><span class="t-ar">٢</span><span class="t-en">2</span></div><h3 class="t-ar">يقدّم بَيَان النصّ</h3><h3 class="t-en">Bayan presents the text</h3><p class="t-ar">يُعرض النصّ بمستوى المتعلّم تمامًا، مصحوبًا بالمفردات والإعراب والأساليب والتحليل البلاغي.</p><p class="t-en">The text appears at exactly the learner's level, accompanied by vocabulary, parsing, styles and rhetorical analysis.</p></div>
+      <div class="step reveal"><div class="num"><span class="t-ar">٢</span><span class="t-en">2</span></div><h3 class="t-ar">تقدّم بَيَان النصّ</h3><h3 class="t-en">Bayan presents the text</h3><p class="t-ar">يُعرض النصّ بمستوى المتعلّم تمامًا، مصحوبًا بالمفردات والإعراب والأساليب والتحليل البلاغي.</p><p class="t-en">The text appears at exactly the learner's level, accompanied by vocabulary, parsing, styles and rhetorical analysis.</p></div>
       <div class="step reveal"><div class="num"><span class="t-ar">٣</span><span class="t-en">3</span></div><h3 class="t-ar">يُقاس الفهم ويُتابَع</h3><h3 class="t-en">Comprehension is measured &amp; tracked</h3><p class="t-ar">أنشطةٌ واختبارٌ بعديّ يقيسان الفهم، وتُتابَع نتائج المتعلّم وتقدّمه عبر المستويات.</p><p class="t-en">Activities and a post-test measure understanding, and the learner's results and progress are tracked across levels.</p></div>
     </div>
   </div>
@@ -917,8 +926,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <span class="eyebrow t-ar">المنهجية</span><span class="eyebrow t-en">Methodology</span>
       <h2 class="t-ar">ستة مستويات ومساران وبناءٌ دقيق للدرس</h2>
       <h2 class="t-en">Six levels, two tracks and a precise lesson structure</h2>
-      <p class="lead t-ar">لا يقتصر التدرّج على طول النصّ، بل يشمل عمق الأفكار وكثافة المفردات ونوع الأسلوب ودرجة الضبط بالشكل — فيُقدَّم لكلّ متعلّمٍ نصٌّ في منطقة نموّه القريبة.</p>
-      <p class="lead t-en">Progression is not only about text length but the depth of ideas, vocabulary density, style and degree of vocalisation — so each learner meets a text within their zone of proximal growth.</p>
+      <p class="lead t-ar">لا يقتصر التدرّج على طول النصّ، بل يشمل عمق الأفكار وكثافة المفردات ونوع الأسلوب ودرجة الضبط بالشكل — فيُقدَّم لكلّ متعلّمٍ نصٌّ في منطقة نموّه الوشيك.</p>
+      <p class="lead t-en">Progression is not only about text length but the depth of ideas, vocabulary density, style and degree of vocalisation — so each learner meets a text within their zone of proximal development.</p>
     </div>
 
     <h3 class="subh"><span class="t-ar">ستة مستويات قرائية</span><span class="t-en">Six reading levels</span></h3>
@@ -1007,10 +1016,10 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
   <div class="wrap">
     <div class="s-head reveal">
       <span class="eyebrow t-ar">المحتوى والمحاور</span><span class="eyebrow t-en">Content &amp; Axes</span>
-      <h2 class="t-ar">أربعة محاورٍ تجعل النصّ نافذةً على المعرفة والهوية</h2>
-      <h2 class="t-en">Four axes that turn a text into a window on knowledge and identity</h2>
-      <p class="lead t-ar">يُعالَج كلُّ موضوعٍ من خلال أربعة محاورٍ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل صلةً بالجذور والحضارة والمعرفة والمرجعية.</p>
-      <p class="lead t-en">Every topic is treated through four integrated axes, so the text is not merely something to read but a link to roots, civilisation, knowledge and reference.</p>
+      <h2 class="t-ar">أربعةُ محاورَ تجعل النصّ نافذةً على المعرفة والهوية</h2>
+      <h2 class="t-en">Four axes that turn a text into a window onto knowledge and identity</h2>
+      <p class="lead t-ar">يُعالَج كلُّ موضوعٍ من خلال أربعةِ محاورَ متكاملة، فلا يكون النصّ مادةً للقراءة فحسب، بل صلةً بالجذور والحضارة والمعرفة والمرجعية.</p>
+      <p class="lead t-en">Every topic is treated through four integrated axes, so the text is not merely something to read but a link to roots, civilisation, knowledge and tradition.</p>
     </div>
     <noscript><style>.axex-panel[hidden]{display:grid!important}</style></noscript>
     <div class="axex reveal" id="axex">
@@ -1021,7 +1030,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         </button>
         <button type="button" class="axex-tab" role="tab" aria-selected="false" aria-controls="ax-historical">
           <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21h16M5 21V9m4 12V9m6 12V9m4 12V9M3 9h18L12 3 3 9z"/></svg></span>
-          <span class="axex-tt"><b class="t-ar">الحضاري</b><b class="t-en">Historical</b><i class="t-ar">نوافذ على الحضارات</i><i class="t-en">Windows on civilisations</i></span>
+          <span class="axex-tt"><b class="t-ar">الحضاري</b><b class="t-en">Civilisational</b><i class="t-ar">نوافذ على الحضارات</i><i class="t-en">Windows onto civilisations</i></span>
         </button>
         <button type="button" class="axex-tab" role="tab" aria-selected="false" aria-controls="ax-subject">
           <span class="axex-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.4" transform="rotate(120 12 12)"/></svg></span>
@@ -1058,10 +1067,10 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           </div>
         </div>
         <div class="axex-panel" id="ax-islamic" role="tabpanel" hidden>
-          <figure class="axex-media"><img src="assets/img-islamic.jpg" alt="مصحفٌ مفتوح وهلال وزخرفة إسلامية" loading="lazy" decoding="async"></figure>
+          <figure class="axex-media"><img src="assets/img-islamic.jpg" alt="مصحفٌ مفتوح على حامل خشبي بجوار نقش هندسي إسلامي" loading="lazy" decoding="async"></figure>
           <div class="axex-info">
-            <p class="desc t-ar">يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة، ويُؤلَّف وفق ضوابط دقيقة.</p>
-            <p class="desc t-en">Connects the learner to their Islamic reference through its authentic texts, authored under precise controls.</p>
+            <p class="desc t-ar">يصل المتعلّم بمرجعيّته الإسلامية عبر نصوصها الأصيلة، ويُؤلَّف المحتوى وفق ضوابط دقيقة.</p>
+            <p class="desc t-en">Connects the learner to the Islamic tradition through its authentic texts, with content composed under strict editorial controls.</p>
             <div class="tags"><span class="t-ar">القرآن الكريم</span><span class="t-en">The Holy Qur'an</span><span class="t-ar">الحديث النبوي</span><span class="t-en">Prophetic hadith</span><span class="t-ar">الفقه الإسلامي</span><span class="t-en">Islamic jurisprudence</span><span class="t-ar">السيرة النبوية</span><span class="t-en">The Prophetic biography</span></div>
           </div>
         </div>
@@ -1072,8 +1081,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <div class="p2-body">
         <span class="p2-tag"><span class="t-ar">طبقة عابرة للمحاور</span><span class="t-en">Cross-cutting layer</span></span>
         <h3 class="t-ar">طبقة الشخصيات</h3><h3 class="t-en">Personalities layer</h3>
-        <p class="t-ar">تتقاطع مع المحاور الأربعة طبقةٌ من الشخصيات المصنّفة (علمية، سياسية، أدبية، فنية، دينية، اجتماعية، رياضية…)، تقرن كلَّ موضوعٍ بشخصيةٍ ذات صلة؛ فيلتقي المتعلّم في درس الفلك بعالِمٍ فلكيٍّ، وفي درس الشعر بشاعر — فيغدو التعلّم أقرب إلى القصة منه إلى التلقين.</p>
-        <p class="t-en">Cutting across the four axes is a layer of figures classified by type (scientific, political, literary, artistic, religious, social, sporting…), pairing every topic with a relevant figure — so in an astronomy lesson the learner meets an astronomer, and in a poetry lesson, a poet — making learning closer to a story than to rote.</p>
+        <p class="t-ar">تتقاطع مع المحاور الأربعة طبقةٌ من الشخصيات المصنّفة (علمية، سياسية، أدبية، فنية، دينية، اجتماعية، رياضية بدنية…)، تقرن كلَّ موضوعٍ بشخصيةٍ ذات صلة؛ فيلتقي المتعلّم في درس الفلك بفَلَكيٍّ، وفي درس الشعر بشاعر — فيغدو التعلّم أقرب إلى القصة منه إلى التلقين.</p>
+        <p class="t-en">Cutting across the four axes is a layer of figures classified by type (scientific, political, literary, artistic, religious, social, athletic…), pairing every topic with a relevant figure — so in an astronomy lesson the learner meets an astronomer, and in a poetry lesson, a poet — turning learning into a story rather than rote memorisation.</p>
       </div>
     </div>
   </div>
@@ -1101,7 +1110,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <div class="featlist reveal">
         <div class="feat">
           <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 3v18h18M7 14l3-3 3 3 5-6"/></svg></span>
-          <div><h4 class="t-ar">لوحات التتبّع والتقارير</h4><h4 class="t-en">Dashboards &amp; reporting</h4><p class="t-ar">لوحةٌ للمتعلّم (المسار والإنجاز ونقاط الفهم)، وللمعلّم (أداء كلّ طالبٍ وصفٍّ ونتائج تلقائية)، وللإدارة/الوزارة (تقارير تجميعية قابلة للتصدير تدعم القرار).</p><p class="t-en">A learner dashboard (path, achievement and comprehension points), a teacher dashboard (each student's and class's performance with automatic results), and an admin/ministry dashboard (exportable aggregate reports that support decisions).</p></div>
+          <div><h4 class="t-ar">لوحات التتبّع والتقارير</h4><h4 class="t-en">Dashboards &amp; reporting</h4><p class="t-ar">لوحةٌ للمتعلّم (المسار والإنجاز ومؤشّرات الفهم)، وللمعلّم (أداء كلّ طالبٍ وصفٍّ ونتائج تلقائية)، وللإدارة/الوزارة (تقارير إجمالية قابلة للتصدير تدعم القرار).</p><p class="t-en">A learner dashboard (path, achievement and comprehension metrics), a teacher dashboard (each student's and class's performance with automatic results), and an admin/ministry dashboard (exportable aggregate reports for decision-support).</p></div>
         </div>
         <div class="feat">
           <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 13a5 5 0 0 0 7 0l2-2a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-2 2a5 5 0 0 0 7 7l1-1"/></svg></span>
@@ -1109,7 +1118,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         </div>
         <div class="feat">
           <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
-          <div><h4 class="t-ar">استجابةٌ كاملة وإتاحة</h4><h4 class="t-en">Fully responsive &amp; accessible</h4><p class="t-ar">تعمل على الحاسوب واللوح والجوال، وتدعم الإتاحة (Accessibility) عبر قارئ الشاشة والتنقّل بلوحة المفاتيح.</p><p class="t-en">Works on desktop, tablet and mobile, and supports accessibility through screen readers and keyboard navigation.</p></div>
+          <div><h4 class="t-ar">تصميمٌ متجاوب ومُتاح</h4><h4 class="t-en">Fully responsive &amp; accessible</h4><p class="t-ar">تعمل على الحاسوب واللوح والجوال، وتدعم الإتاحة (Accessibility) عبر قارئ الشاشة والتنقّل بلوحة المفاتيح.</p><p class="t-en">Works on desktop, tablet and mobile, and supports accessibility through screen readers and keyboard navigation.</p></div>
         </div>
       </div>
 
@@ -1151,15 +1160,15 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         <div class="sol-content">
           <span class="tag"><span class="t-ar">القطاع الخاص</span><span class="t-en">Private sector</span></span>
           <h3 class="t-ar">للمدارس الخاصة</h3><h3 class="t-en">For Private Schools</h3>
-          <p class="need t-ar">تبحث المدرسة عن ما يميّزها ويرفع نتائج طلبتها معًا، وضعف القرائية من أكثر ما يقلق أولياء الأمور.</p>
+          <p class="need t-ar">تبحث المدرسة عمَّا يميّزها ويرفع نتائج طلبتها معًا، وضعف القرائية من أكثر ما يقلق أولياء الأمور.</p>
           <p class="need t-en">Private schools seek both distinction and stronger outcomes; weak literacy is among parents' greatest concerns.</p>
           <p class="resp t-ar">منهجٌ قرائيٌّ متدرّج جاهز التطبيق يوفّر عناء التأليف والضبط، ويُدمَج مع منهجك القائم لا ليزاحمه؛ ومع لوحات المتابعة تتحوّل القرائية من هاجسٍ إلى ميزةٍ تسويقية ملموسة.</p>
           <p class="resp t-en">A ready, graded literacy curriculum that spares authoring and levelling and integrates with your existing programme rather than competing with it; and with tracking dashboards, literacy turns from a worry into a tangible competitive advantage.</p>
-          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+          <a href="#contact" class="lnk"><span class="t-ar">احجز جلسة تعريفية لمدرستك <span class="x">←</span></span><span class="t-en">Book a session for your school <span class="x">→</span></span></a>
         </div>
       </article>
       <article class="sol-row reveal">
-        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٢</span><span class="t-en">02</span></span><img loading="lazy" decoding="async" alt="مبنىً مؤسّسيٌّ حديث يمثّل جهةً حكومية" style="object-position:center" src="assets/img-sol-ministry.jpg"></div>
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٢</span><span class="t-en">02</span></span><img loading="lazy" decoding="async" alt="مبنًى مؤسّسيٌّ حديث يمثّل جهةً حكومية" style="object-position:center" src="assets/img-sol-ministry.jpg"></div>
         <div class="sol-content">
           <span class="tag"><span class="t-ar">القطاع الحكومي</span><span class="t-en">Public sector</span></span>
           <h3 class="t-ar">لوزارات التعليم</h3><h3 class="t-en">For Ministries of Education</h3>
@@ -1167,11 +1176,11 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           <p class="need t-en">Weak literacy is a system-wide challenge, hard to address with scattered solutions or inconsistent content.</p>
           <p class="resp t-ar">حلٌّ منهجيٌّ قابل للتوسّع يُواءَم مع المراحل الوطنية، ويربط القرائية بالهوية والحضارة والمعرفة؛ ومع لوحاتٍ تجميعية ومعايير موحّدة يدعم سياسات تطوير العربية على نطاقٍ واسع.</p>
           <p class="resp t-en">A scalable, methodical solution, alignable to national stages and anchoring literacy in identity, civilisation and knowledge; and with aggregate dashboards and unified standards, it supports Arabic-development policy at scale.</p>
-          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+          <a href="#contact" class="lnk"><span class="t-ar">تحدّث إلى فريق الشراكات الحكومية <span class="x">←</span></span><span class="t-en">Talk to our public-sector team <span class="x">→</span></span></a>
         </div>
       </article>
       <article class="sol-row reveal">
-        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٣</span><span class="t-en">03</span></span><img loading="lazy" decoding="async" alt="معلّمةٌ ترشد طلابًا حول مكتب الدراسة" style="object-position:center" src="assets/img-sol-teachers.jpg"></div>
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٣</span><span class="t-en">03</span></span><img loading="lazy" decoding="async" alt="معلّمةٌ ترشد طلابًا حول طاولة الدراسة" style="object-position:center" src="assets/img-sol-teachers.jpg"></div>
         <div class="sol-content">
           <span class="tag"><span class="t-ar">المعلّمون</span><span class="t-en">Educators</span></span>
           <h3 class="t-ar">للمعلمين</h3><h3 class="t-en">For Teachers</h3>
@@ -1179,7 +1188,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           <p class="need t-en">Arabic teachers spend long hours preparing, levelling and grading, leaving less time for what they do best: teaching.</p>
           <p class="resp t-ar">محتوًى جاهزٌ مبنيٌّ على أسسٍ علمية، وبناءٌ واضح للدرس، وتصحيحٌ تلقائيّ للاختبارات، وأدوات تكليفٍ ومتابعة؛ فتتفرّغ لتوجيه الفهم وإدارة النقاش وإلهام طلبتك.</p>
           <p class="resp t-en">Ready, research-based content, a clear lesson structure, auto-graded tests, and organised assignment and tracking tools — so you can focus on guiding understanding, leading discussion and inspiring your students.</p>
-          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+          <a href="#contact" class="lnk"><span class="t-ar">جرّب المنصّة بحساب معلّم <span class="x">←</span></span><span class="t-en">Try the platform as a teacher <span class="x">→</span></span></a>
         </div>
       </article>
       <article class="sol-row reveal">
@@ -1191,31 +1200,9 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
           <p class="need t-en">Students grow frustrated with a text above their level, bored by one below it, and disengaged when reading does not touch their world.</p>
           <p class="resp t-ar">رحلةٌ قرائيةٌ بمستواك تمامًا، ومحتوًى يربطك بهويّتك وحضارتك؛ واقترانُ كلّ موضوعٍ بشخصيةٍ مُلهمة يبني فيك عادة القراءة الفاهمة الناقدة التي تخدمك في كلّ موادك.</p>
           <p class="resp t-en">A journey at exactly your level and content that ties you to your identity and civilisation; pairing every topic with an inspiring figure builds the habit of critical, comprehending reading that serves you across all your subjects.</p>
-          <a href="#contact" class="lnk"><span class="t-ar">اطلب عرضًا <span class="x">←</span></span><span class="t-en">Request a demo <span class="x">→</span></span></a>
+          <a href="#contact" class="lnk"><span class="t-ar">انضمّ كطالب وابدأ رحلتك <span class="x">←</span></span><span class="t-en">Join as a student and start your journey <span class="x">→</span></span></a>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ IMPACT STATS BAND ============ -->
-<!-- NOTE: figures below are illustrative. Replace data-target values with real metrics before launch. -->
-<div class="ornament" aria-hidden="true">
-  <svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="42,8 76,42 42,76 8,42"/><polygon points="18,18 66,18 66,66 18,66"/><circle cx="42" cy="42" r="6"/></svg>
-</div>
-<section class="sec impact" id="impact" aria-label="Impact in numbers">
-  <div class="geo-layer" aria-hidden="true"></div>
-  <div class="wrap">
-    <div class="s-head center reveal" style="margin-bottom:clamp(28px,4vw,44px)">
-      <span class="eyebrow t-ar">الأثر بالأرقام</span><span class="eyebrow t-en">Impact in numbers</span>
-      <h2 class="t-ar">قرائيةٌ تُقاس، لا تُدّعى</h2>
-      <h2 class="t-en">Literacy that is measured, not merely claimed</h2>
-    </div>
-    <div class="grid-stats">
-      <div class="stat reveal"><div class="sn" data-target="6"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">مستويات قرائية</div><div class="st t-en">Reading levels</div><div class="ss t-ar">من الروضة إلى الجامعة</div><div class="ss t-en">KG to university</div></div>
-      <div class="stat reveal"><div class="sn" data-target="10"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">أقسام لكل درس</div><div class="st t-en">Parts per lesson</div><div class="ss t-ar">من النصّ إلى التطبيق</div><div class="ss t-en">From text to practice</div></div>
-      <div class="stat reveal"><div class="sn" data-target="4"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">محاور معرفية</div><div class="st t-en">Knowledge axes</div><div class="ss t-ar">محلي · حضاري · موضوعي · إسلامي</div><div class="ss t-en">Local · Historical · Subject · Islamic</div></div>
-      <div class="stat reveal"><div class="sn" data-target="100" data-suffix="%"><span class="t-ar">٠</span><span class="t-en">0</span></div><div class="st t-ar">محتوى مراجَع علميًّا</div><div class="st t-en">Academically reviewed</div><div class="ss t-ar">قبل كل نشر</div><div class="ss t-en">Before every publication</div></div>
     </div>
   </div>
 </section>
@@ -1230,10 +1217,10 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
     </div>
     <figure class="about-band reveal"><img src="assets/about-calligraphy.jpg" alt="يدٌ تكتب خطًّا عربيًّا بالقلم والحبر" loading="lazy" decoding="async"></figure>
     <div class="philo reveal">
-      <p class="q t-ar">وُلدت بَيَان من ملاحظةٍ بسيطة وعميقة: أنّ تعليم الطفل أن <em>يقرأ</em> شيءٌ، وأن نعلّمه أن <em>يفهم</em> شيءٌ آخر.</p>
+      <p class="q t-ar">وُلدت بَيَان من ملاحظةٍ بسيطة وعميقة: أنّ تعليم الطفل القراءةَ شيءٌ، وتعليمَه الفهمَ شيءٌ آخر.</p>
       <p class="q t-en">Bayan was born of a simple, deep observation: teaching a child to <em>read</em> is one thing; teaching them to <em>understand</em> is another.</p>
-      <p class="t-ar">القرائية هي البوابة الأولى لكلّ تعلّم، وضعفها يُعيق المتعلّم في كلّ المواد لا في اللغة وحدها. لذا تقوم بَيَان على مبدأٍ ناظم: القراءة وسيلة، والقرائية غاية — ولا قيمة لقراءةٍ لا يُبنى عليها فهمٌ ولا يَنتج عنها تفاعلٌ مع النص.</p>
-      <p class="t-en">Literacy is the first gateway to all learning, and its weakness hinders the learner in every subject, not language alone. So Bayan rests on one governing principle: reading is the means, literacy is the end — reading has no value if no understanding is built upon it and no engagement with the text results.</p>
+      <p class="t-ar">القرائية هي البوابة الأولى لكلّ تعلّم، وضعفها يُعيق المتعلّم في كلّ المواد لا في اللغة وحدها. لذا قامت بَيَان على هذا المبدأ الناظم — فلا قيمة لقراءةٍ لا يُبنى عليها فهمٌ، ولا يَنتج عنها تفاعلٌ مع النصّ.</p>
+      <p class="t-en">Literacy is the first gateway to all learning, and its weakness hinders the learner in every subject, not language alone. That is why Bayan rests on this governing principle — reading has value only when it builds understanding and prompts engagement with the text.</p>
     </div>
     <div class="princ">
       <div class="card reveal">
@@ -1275,8 +1262,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <details class="faq reveal"><summary><span class="t-ar">ما الفرق بين بَيَان ومنصات تعليم العربية الأخرى؟</span><span class="t-en">How is Bayan different from other Arabic-teaching platforms?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">تركّز بَيَان على القرائية لا على تعليم اللغة فحسب: هدفها بناء الفهم والتحليل والنقد، عبر محتوًى يربط القراءة بالهوية والحضارة والمعرفة في أربعة محاور، ومستوياتٍ ستّ متدرّجة بدقّة.</span><span class="t-en">Bayan focuses on literacy, not language teaching alone: its goal is to build comprehension, analysis and critique, through content linking reading to identity, civilisation and knowledge across four axes, and six precisely graded levels.</span></div></details>
       <details class="faq reveal"><summary><span class="t-ar">لمن صُمّمت المنصة؟</span><span class="t-en">Who is the platform designed for?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">للمدارس الخاصة ووزارات التعليم والمعلمين والطلبة من رياض الأطفال إلى الجامعة، مع حساباتٍ ولوحاتٍ تناسب كلّ دور.</span><span class="t-en">For private schools, ministries of education, teachers and students from kindergarten to university, with accounts and dashboards suited to each role.</span></div></details>
       <details class="faq reveal"><summary><span class="t-ar">كيف تُضمَن دقّة المحتوى علميًّا؟</span><span class="t-en">How is content accuracy ensured?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">يخضع كلُّ محتوًى لمراجعةٍ علمية متخصّصة قبل النشر، وتُصان النصوص المقدّسة والتراثية كما وردت دون تعديل.</span><span class="t-en">Every piece of content undergoes specialised academic review before publication, and sacred and classical texts are preserved as received, without alteration.</span></div></details>
-      <details class="faq reveal"><summary><span class="t-ar">هل يحلّ بَيَان محلّ منهج المدرسة؟</span><span class="t-en">Does Bayan replace the school's curriculum?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">لا؛ صُمّم ليتكامل مع المناهج القائمة ويواءمها، لا ليزاحمها، فيوظّفه المعلّم بمرونةٍ ضمن خطّته.</span><span class="t-en">No; it is designed to integrate with and align to existing curricula rather than compete with them, so teachers deploy it flexibly within their plan.</span></div></details>
-      <details class="faq reveal"><summary><span class="t-ar">بأيّ لغة المحتوى؟</span><span class="t-en">What language is the content in?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">المحتوى التعليمي بالعربية الفصحى المعيارية. أمّا واجهة الموقع التعريفي فثنائية اللغة عربي/إنجليزي.</span><span class="t-en">The educational content is in standard literary Arabic, while the marketing website's interface is bilingual, Arabic/English.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">هل يحلّ بَيَان محلّ منهج المدرسة؟</span><span class="t-en">Does Bayan replace the school's curriculum?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">لا؛ صُمَّمت لتتكامل مع المناهج القائمة وتوائمها، لا ليزاحمها، فيوظّفه المعلّم بمرونةٍ ضمن خطّته.</span><span class="t-en">No; it is designed to integrate with and align to existing curricula rather than compete with them, so teachers deploy it flexibly within their plan.</span></div></details>
+      <details class="faq reveal"><summary><span class="t-ar">ما لغة المحتوى؟</span><span class="t-en">What language is the content in?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">المحتوى التعليمي بالعربية الفصحى المعيارية. أمّا واجهة الموقع التعريفي فثنائية اللغة عربي/إنجليزي.</span><span class="t-en">The educational content is in Modern Standard Arabic (MSA), while the marketing website's interface is bilingual, Arabic/English.</span></div></details>
       <details class="faq reveal"><summary><span class="t-ar">كيف نبدأ؟</span><span class="t-en">How do we start?</span><span class="pl"></span></summary><div class="ans"><span class="t-ar">عبر طلب عرضٍ تعريفيّ من نموذج التواصل، فيتواصل الفريق لتحديد احتياج جهتك وتجهيز تجربةٍ مناسبة.</span><span class="t-en">By requesting a demo from the contact form; the team will then reach out to identify your organisation's needs and prepare a suitable experience.</span></div></details>
     </div>
   </div>
@@ -1408,8 +1395,14 @@ const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches
 const hdr=document.getElementById('hdr');
 const bar=document.getElementById('progress');
 const toTop=document.getElementById('toTop');
+const darkSecs=[...document.querySelectorAll('section.dark, section.cta.dark')];
 function onScroll(){
   if(hdr)hdr.classList.toggle('scrolled',window.scrollY>12);
+  if(hdr&&darkSecs.length){
+    const probe=hdr.getBoundingClientRect().bottom-4;
+    const overDark=darkSecs.some(s=>{const r=s.getBoundingClientRect();return r.top<=probe&&r.bottom>=probe;});
+    hdr.classList.toggle('on-dark',overDark);
+  }
   const h=document.documentElement;
   const max=h.scrollHeight-h.clientHeight;
   const p=max>0?h.scrollTop/max:0;
@@ -1421,8 +1414,9 @@ window.addEventListener('scroll',onScroll,{passive:true});
 // mobile menu
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
 if(burger&&menu){
-  burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+  burger.addEventListener('click',e=>{e.stopPropagation();const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+  document.addEventListener('click',e=>{if(menu.classList.contains('open')&&!menu.contains(e.target)&&!burger.contains(e.target)){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
 }
 
 // back-to-top
