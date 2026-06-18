@@ -440,6 +440,19 @@ img{max-width:100%}
 .sec-banner img{width:100%;height:100%;object-fit:cover;display:block}
 .about-band{position:relative;border-radius:var(--radius);overflow:hidden;margin:4px 0 clamp(26px,4vw,40px);aspect-ratio:16/7;box-shadow:0 26px 54px -32px rgba(14,11,10,.5)}
 .about-band img{width:100%;height:100%;object-fit:cover;display:block}
+/* branded variant: Bayan logo on a dark, geometric panel */
+.about-band.brand-band{display:grid;place-items:center;background:var(--black);aspect-ratio:16/6}
+.about-band.brand-band .geo-band{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-image:var(--pat-geo-light);background-size:84px 84px;opacity:.07;
+  -webkit-mask-image:radial-gradient(120% 120% at 50% 50%,#000 35%,transparent 72%);
+  mask-image:radial-gradient(120% 120% at 50% 50%,#000 35%,transparent 72%)}
+.about-band.brand-band::before,.about-band.brand-band::after{content:"";position:absolute;width:42%;aspect-ratio:1;
+  border-radius:50%;background:radial-gradient(circle,rgba(236,33,39,.18),transparent 68%);z-index:0;pointer-events:none}
+.about-band.brand-band::before{inset-inline-start:-8%;top:-30%}
+.about-band.brand-band::after{inset-inline-end:-8%;bottom:-34%}
+.about-band.brand-band img{position:relative;z-index:1;width:auto;height:auto;
+  max-width:min(380px,62%);max-height:58%;object-fit:contain;filter:drop-shadow(0 14px 30px rgba(0,0,0,.45))}
+@media(max-width:560px){.about-band.brand-band{aspect-ratio:16/8}.about-band.brand-band img{max-width:74%}}
 @media (max-width:560px){.card-media{aspect-ratio:16/9}.about-band{aspect-ratio:16/8}.sec-banner{aspect-ratio:16/9}}
 </style>
 <style>.solcard{overflow:hidden}.solcard:hover .card-media img{transform:scale(1.05)}</style>
@@ -1215,7 +1228,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <h2 class="t-ar">القراءة وسيلة، والقرائية غاية</h2>
       <h2 class="t-en">Reading is the means, literacy the end</h2>
     </div>
-    <figure class="about-band reveal"><img src="assets/about-calligraphy.jpg" alt="يدٌ تكتب خطًّا عربيًّا بالقلم والحبر" loading="lazy" decoding="async"></figure>
+    <figure class="about-band brand-band reveal"><span class="geo-band" aria-hidden="true"></span><img src="assets/logo-light.png" alt="بَيَان — منصة القرائية العربية" loading="lazy" decoding="async"></figure>
     <div class="philo reveal">
       <p class="q t-ar">وُلدت بَيَان من ملاحظةٍ بسيطة وعميقة: أنّ تعليم الطفل القراءةَ شيءٌ، وتعليمَه الفهمَ شيءٌ آخر.</p>
       <p class="q t-en">Bayan was born of a simple, deep observation: teaching a child to <em>read</em> is one thing; teaching them to <em>understand</em> is another.</p>
