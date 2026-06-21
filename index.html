@@ -433,6 +433,11 @@ img{max-width:100%}
 .hero-photo{position:relative;width:100%;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 70px -32px rgba(14,11,10,.6)}
 .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-photo::after{content:"";position:absolute;inset:0;border-radius:var(--radius);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);pointer-events:none}
+/* transparent cut-out hero (diverse learners) — floats over the decorative circle */
+.hero-cutout{position:relative;width:100%;display:flex;justify-content:center;align-items:flex-end;z-index:1}
+.hero-cutout img{width:auto;max-width:100%;height:min(520px,62vw);object-fit:contain;display:block;
+  filter:drop-shadow(0 24px 30px rgba(20,16,14,.20))}
+@media(max-width:980px){.hero-cutout img{height:min(420px,64vw)}}
 .card-media{margin:-28px -28px 22px;aspect-ratio:16/10;background:var(--line);overflow:hidden}
 .card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .axiscard:hover .card-media img{transform:scale(1.05)}
@@ -825,8 +830,8 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         <span class="t-ar"><b>١٠</b> أقسامٍ في الدرس</span><span class="t-en"><b>10</b> lesson parts</span>
       </div>
     </div>
-    <div class="hero-art reveal has-photo">
-      <figure class="hero-photo"><img src="assets/hero.jpg" alt="طفلٌ يتعلّم القرائية عبر لوح رقمي تتصاعد منه حروف عربية مضيئة" loading="eager" decoding="async"></figure>
+    <div class="hero-art reveal has-photo has-cutout">
+      <figure class="hero-cutout"><img src="assets/hero-group.png" alt="متعلّمون من أعمارٍ وثقافاتٍ متنوّعة يتعلّمون العربية معًا عبر لوحٍ رقمي تتصاعد منه حروف عربية" loading="eager" decoding="async"></figure>
       <div class="tagchip"><i>◆</i> <span class="t-ar">القراءة وسيلة · القرائية غاية</span><span class="t-en">Reading is the means · literacy the end</span></div>
     </div>
   </div>
@@ -1081,7 +1086,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       </div>
     </div>
     <div class="persona2 reveal">
-      <div class="p2-media"><img src="assets/img-personalities.jpg" alt="شخصيات ملهمة من العلم والأدب والتاريخ" loading="lazy" decoding="async"></div>
+      <div class="p2-media"><img src="assets/img-personalities.jpg" alt="طفلٌ يكتشف شخصياتٍ ملهمة من العلم والأدب والتاريخ تنبثق من لوحٍ رقمي" loading="lazy" decoding="async"></div>
       <div class="p2-body">
         <span class="p2-tag"><span class="t-ar">طبقة عابرة للمحاور</span><span class="t-en">Cross-cutting layer</span></span>
         <h3 class="t-ar">طبقة الشخصيات</h3><h3 class="t-en">Personalities layer</h3>
@@ -1196,7 +1201,7 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
         </div>
       </article>
       <article class="sol-row reveal">
-        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٤</span><span class="t-en">04</span></span><img loading="lazy" decoding="async" alt="طلابٌ يقرؤون في مكتبة" style="object-position:center" src="assets/img-sol-students.jpg"></div>
+        <div class="sol-media"><span class="sol-num"><span class="t-ar">٠٤</span><span class="t-en">04</span></span><img loading="lazy" decoding="async" alt="طلابٌ من ثقافاتٍ متنوّعة يتعلّمون العربية حول طاولةٍ رقمية تفاعلية" style="object-position:center" src="assets/img-sol-students.jpg"></div>
         <div class="sol-content">
           <span class="tag"><span class="t-ar">المتعلّمون</span><span class="t-en">Learners</span></span>
           <h3 class="t-ar">للطلبة</h3><h3 class="t-en">For Students</h3>
