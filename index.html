@@ -128,7 +128,8 @@ header.on-dark.scrolled{background:rgba(14,11,10,.92)}
   box-shadow:var(--shadow);border:1px solid var(--line)}
 .hero-art .ring{position:absolute;width:min(540px,98%);aspect-ratio:1;border-radius:50%;border:1px dashed var(--line-2)}
 .hero-art img{position:relative;height:min(420px,52vw);width:auto;filter:drop-shadow(0 30px 40px rgba(236,33,39,.22))}
-.hero-art .tagchip{position:absolute;bottom:6%;inset-inline-start:2%;background:#fff;border:1px solid var(--line);
+.hero-art .tagchip{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);z-index:4;white-space:nowrap;
+  background:#fff;border:1px solid var(--line);
   border-radius:12px;padding:11px 16px;box-shadow:var(--shadow-sm);font-family:'Cairo';font-weight:700;font-size:.86rem;color:var(--ink)}
 .hero-art .tagchip i{color:var(--red);font-style:normal}
 
@@ -435,9 +436,9 @@ img{max-width:100%}
 .hero-photo::after{content:"";position:absolute;inset:0;border-radius:var(--radius);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);pointer-events:none}
 /* transparent cut-out hero (diverse learners) — floats over the decorative circle */
 .hero-cutout{position:relative;width:100%;display:flex;justify-content:center;align-items:flex-end;z-index:1}
-.hero-cutout img{width:auto;max-width:100%;height:min(520px,62vw);object-fit:contain;display:block;
+.hero-cutout img{width:auto;max-width:108%;height:min(620px,72vw);object-fit:contain;display:block;
   filter:drop-shadow(0 24px 30px rgba(20,16,14,.20))}
-@media(max-width:980px){.hero-cutout img{height:min(420px,64vw)}}
+@media(max-width:980px){.hero-cutout img{height:min(480px,74vw)}}
 .card-media{margin:-28px -28px 22px;aspect-ratio:16/10;background:var(--line);overflow:hidden}
 .card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
 .axiscard:hover .card-media img{transform:scale(1.05)}
