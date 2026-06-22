@@ -799,11 +799,11 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       <a href="#platform"><span class="t-ar">المنصة</span><span class="t-en">Platform</span></a>
       <a href="#solutions"><span class="t-ar">الحلول</span><span class="t-en">Solutions</span></a>
       <a href="#faq"><span class="t-ar">الأسئلة</span><span class="t-en">FAQ</span></a>
-      <a href="#contact" class="menu-cta"><span class="t-ar">اطلب عرضًا</span><span class="t-en">Request a demo</span></a>
+      <a href="https://www.bayanonline.com/login" target="_blank" rel="noopener noreferrer" class="menu-cta"><span class="t-ar">تسجيل الدخول</span><span class="t-en">Login</span></a>
     </nav>
     <div class="nav-cta">
       <button id="langBtn" class="lang" type="button" aria-label="Switch language"><span class="t-ar">EN</span><span class="t-en">ع</span></button>
-      <a href="#contact" class="btn btn-primary"><span class="t-ar">اطلب عرضًا</span><span class="t-en">Request a demo</span></a>
+      <a href="https://www.bayanonline.com/login" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><span class="t-ar">تسجيل الدخول</span><span class="t-en">Login</span></a>
       <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -1313,13 +1313,13 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       </div>
     </div>
     <div class="form reveal">
-      <form id="demoForm" novalidate>
+      <form id="demoForm">
         <h3 class="t-ar">اطلب عرضًا تعريفيًّا</h3><h3 class="t-en">Request a demo</h3>
         <p class="fp t-ar">املأ النموذج وسنعود إليك قريبًا.</p><p class="fp t-en">Fill in the form and we will get back to you soon.</p>
-        <div class="field"><label for="f-name"><span class="t-ar">الاسم</span><span class="t-en">Name</span></label><input class="input" id="f-name" name="name" type="text" placeholder="اسمك الكريم" data-ph-ar="اسمك الكريم" data-ph-en="Your name" autocomplete="name"></div>
-        <div class="field"><label for="f-org"><span class="t-ar">الجهة</span><span class="t-en">Organisation</span></label><input class="input" id="f-org" name="org" type="text" placeholder="اسم المدرسة أو الجهة" data-ph-ar="اسم المدرسة أو الجهة" data-ph-en="School or organisation" autocomplete="organization"></div>
+        <div class="field"><label for="f-name"><span class="t-ar">الاسم</span><span class="t-en">Name</span></label><input class="input" id="f-name" name="name" type="text" placeholder="اسمك الكريم" data-ph-ar="اسمك الكريم" data-ph-en="Your name" autocomplete="name" required></div>
+        <div class="field"><label for="f-org"><span class="t-ar">الجهة</span><span class="t-en">Organisation</span></label><input class="input" id="f-org" name="org" type="text" placeholder="اسم المدرسة أو الجهة" data-ph-ar="اسم المدرسة أو الجهة" data-ph-en="School or organisation" autocomplete="organization" required></div>
         <div class="field"><label for="f-type"><span class="t-ar">نوع الجهة</span><span class="t-en">Organisation type</span></label>
-          <select class="input" id="f-type" name="type">
+          <select class="input" id="f-type" name="type" required>
             <option value="" data-en="Select type…">اختر النوع…</option>
             <option data-en="Private school">مدرسة خاصة</option>
             <option data-en="Ministry / government">وزارة / جهة حكومية</option>
@@ -1328,15 +1328,15 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
             <option data-en="Other">أخرى</option>
           </select>
         </div>
-        <div class="field"><label for="f-email"><span class="t-ar">البريد الإلكتروني</span><span class="t-en">Email</span></label><input class="input" id="f-email" name="email" type="email" placeholder="name@example.com" autocomplete="email"></div>
+        <div class="field"><label for="f-email"><span class="t-ar">البريد الإلكتروني</span><span class="t-en">Email</span></label><input class="input" id="f-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required></div>
         <button type="submit" class="btn btn-primary"><span class="t-ar">إرسال الطلب <span class="x">←</span></span><span class="t-en">Send request <span class="x">→</span></span></button>
-        <p class="note"><span class="t-ar">نموذج توضيحي — لا تُرسَل البيانات إلى أيّ خادم.</span><span class="t-en">Demo form — no data is sent to any server.</span></p>
+        <p class="note"><span class="t-ar">سنستخدم بياناتك للتواصل معك بخصوص طلبك فقط.</span><span class="t-en">We'll use your details only to contact you about your request.</span></p>
       </form>
       <div class="thanks" id="thanks">
         <span class="ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
         <h3 class="t-ar">شكرًا لك!</h3><h3 class="t-en">Thank you!</h3>
-        <p class="t-ar">تم استلام طلبك في هذا النموذج التجريبي. عند الربط الفعليّ سيصلك الفريق على بريدك.</p>
-        <p class="t-en">Your request has been received in this demo form. Once connected for real, the team will reach you by email.</p>
+        <p class="t-ar">تم استلام طلبك بنجاح، وسيتواصل معك فريق بَيَان قريبًا.</p>
+        <p class="t-en">Your request has been received. The Bayan team will contact you soon.</p>
       </div>
     </div>
   </div>
@@ -1502,10 +1502,32 @@ if(axex){
   }));
 }
 
-// demo form (no network)
+// demo form -> sends to info@almotahidaeducation.com via FormSubmit (AJAX)
 const form=document.getElementById('demoForm'),thanks=document.getElementById('thanks');
 if(form&&thanks){
-  form.addEventListener('submit',e=>{e.preventDefault();form.style.display='none';thanks.style.display='block';thanks.setAttribute('tabindex','-1');thanks.focus();});
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    const btn=form.querySelector('button[type="submit"]');
+    if(btn)btn.disabled=true;
+    try{
+      const data=Object.fromEntries(new FormData(form).entries());
+      data._subject='طلب عرض تعريفي — موقع بَيَان';
+      data._template='table';
+      data._captcha='false';
+      const res=await fetch('https://formsubmit.co/ajax/info@almotahidaeducation.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify(data)
+      });
+      if(!res.ok)throw new Error('network');
+      form.style.display='none';thanks.style.display='block';thanks.setAttribute('tabindex','-1');thanks.focus();
+    }catch(err){
+      if(btn)btn.disabled=false;
+      const en=document.documentElement.lang==='en';
+      alert(en?'Could not send right now. Please email info@almotahidaeducation.com directly.':'تعذّر الإرسال الآن. يُرجى مراسلتنا مباشرةً على info@almotahidaeducation.com');
+    }
+  });
 }
 
 // ===== language toggle (persisted + browser-aware) =====
