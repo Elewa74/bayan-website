@@ -306,11 +306,10 @@ table.t{width:100%;border-collapse:collapse;min-width:560px}
 .review .seal svg{width:34px;height:34px}
 .review h3{color:#fff;font-size:1.2rem} .review p{color:var(--on-dark);margin-top:8px;font-size:1rem}
 .review b{color:#fff}
-.review .dev-by{display:flex;align-items:center;gap:14px;margin-top:22px;flex-wrap:wrap}
-.review .dev-by .lbl{font-family:'Cairo';font-weight:700;font-size:.82rem;color:var(--on-dark-mut)}
-.review .dev-logo{background:#fff;border-radius:14px;padding:9px 13px;display:inline-flex;box-shadow:0 8px 22px -12px rgba(0,0,0,.5)}
-.review .dev-logo img{height:58px;width:auto;display:block}
-@media(max-width:760px){.review .dev-by{justify-content:center}}
+.review .dev-brand{display:flex;flex-direction:column;align-items:center;gap:12px;flex:none}
+.review .dev-logo{width:104px;height:auto;display:block}
+.review .dev-name{font-family:'Cairo';font-weight:700;font-size:.82rem;color:#fff;text-align:center;max-width:132px;line-height:1.45}
+@media(max-width:760px){.review .dev-brand{margin-inline:auto}}
 
 /* ---------- FAQ ---------- */
 .faqwrap{max-width:880px;margin-inline:auto;display:grid;gap:14px}
@@ -1252,15 +1251,14 @@ body::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
       </div>
     </div>
     <div class="review reveal">
-      <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span>
+      <div class="dev-brand">
+        <img class="dev-logo" src="assets/almotahida-logo.png" alt="مجموعة المتحدة للتعليم · Almotahida Education Group" loading="lazy" decoding="async">
+        <span class="dev-name"><span class="t-ar">مجموعة المتحدة للتعليم</span><span class="t-en">Almotahida Education Group</span></span>
+      </div>
       <div>
         <h3 class="t-ar">الجهة المطوّرة والمراجعة العلمية</h3><h3 class="t-en">Developer &amp; academic review</h3>
         <p class="t-ar">تطوّر المنصة <b>مجموعة المتحدة للتعليم</b> اعتمادًا على فريقٍ تربويٍّ ولغويّ. ويخضع كلُّ محتوًى — قبل نشره — لمراجعةٍ علمية متخصّصة تضمن دقّته التربوية واللغوية وملاءمته للمستوى، فلا يصل المتعلّم إلا ما اجتاز هذه المراجعة.</p>
         <p class="t-en">The platform is developed by <b>Almotahida Education Group</b>, drawing on an educational and linguistic team. Every piece of content — before publication — undergoes specialised academic review ensuring its pedagogical and linguistic accuracy and level-appropriateness; only what passes this review reaches the learner.</p>
-        <div class="dev-by">
-          <span class="lbl"><span class="t-ar">تطوير</span><span class="t-en">Developed by</span></span>
-          <span class="dev-logo"><img src="assets/almotahida-logo.png" alt="مجموعة المتحدة للتعليم · Almotahida Education Group" loading="lazy" decoding="async"></span>
-        </div>
       </div>
     </div>
   </div>
